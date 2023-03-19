@@ -1,0 +1,23 @@
+body {
+    background-image: url("fondoIndex.png");
+}
+
+/*nav {
+    background: #333333;
+    padding: 2vh;
+}*/
+
+li a {
+    color: white !important;
+    text-decoration: solid !important;
+}
+
+.image {
+    width:25%;
+    height:auto;
+    position:absolute;
+    bottom:50px;
+    right:160px;
+    flex:1;
+}
+
