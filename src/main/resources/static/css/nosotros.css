@@ -1,7 +1,21 @@
-body{
-     margin: 0;
-    background: url(../images/1.png);
+body {
+    background: url("../images/1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0;
+}
+
+h1 {
+    color: #666666;
+    text-align: center;
+}
+
+nav {
+    background: #161616;
+    padding: 2vh;
+}
+
+li a {
+    color: white !important;
 }
