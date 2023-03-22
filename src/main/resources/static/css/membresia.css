@@ -1,0 +1,75 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 19, 2023, 5:09:36 PM
+    Author     : Jeffrey Mojica S
+*/
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url(../images/fondomembresia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+li a {
+    color: white !important;
+    text-decoration: solid !important;
+}
+
+.image {
+    width:25%;
+    height:auto;
+    position:absolute;
+    bottom:50px;
+    right:160px;
+    flex:1;
+}
+
+.container {
+  text-align: center;
+  color:white;
+
+  
+}
+
+.espacio {
+ 
+  margin-top: 40px;
+}
+
+.espacios{
+    margin-top: 10px;
+}
+
+
+.espacio1 {
+  
+  margin-top: 40px;
+}
+
+
+.espacio1_2{
+     margin-top: 10px;
+    
+}
+
+.espacio2 {
+  
+  margin-top: 40px;
+}
+
+.espacio2_2{
+    
+    margin-top: 10px; 
+}
+.table {
+  margin: auto;
+  color:white; 
+
+  
+}

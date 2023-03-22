@@ -20,12 +20,12 @@ h1 {
     font-size: 5vmax;
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    color: crimson;
-    margin-top: 5px;
+    color: white;
+    margin-top: 5vh;
 }
 
-mark.white {
-    color: white;
+mark.crimson {
+    color: crimson;
     background-color: rgba(0, 0, 0, 0); 
 }
 
@@ -39,12 +39,12 @@ li a {
     margin-top: 1000px;
 }
 
-.image {
+/*.image {
     width: 25%;
     height: auto;
     position: absolute;
     bottom: 50px;
     right: 160px;
     flex: 1;
-}
+}*/
 
