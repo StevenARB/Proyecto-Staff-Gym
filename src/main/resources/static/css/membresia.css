@@ -11,9 +11,34 @@ body{
     font-family: sans-serif;
     margin: 0;
     background-image: url(../images/fondomembresia.jpg);
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+
+h1{
+
+    margin-top:40px;
+}
+
+.p {
+  margin: 10px auto;
+
+  background-color: rgba(29, 43, 53, 0.6);
+  max-width: 30%;
+}
+
+
+
+
+hr {
+    width: 30%;
+    margin: 0 auto;
+    background: linear-gradient(to right, blue, white); /* linear-gradient para unir 2 colores;*/
+    border: none;
+    border-top: 3px solid white;
 }
 
 li a {
@@ -31,45 +56,75 @@ li a {
 }
 
 .container {
-  text-align: center;
-  color:white;
+    text-align: center;
+    color:white;
 
+
+}
+
+
+.mensualidad{
+    float: left;
+    margin-top: 150px;
+    float: right;
+    padding: 10px;
+    background-color: #1D2B35;
+    opacity: 0.8;
+    margin-right: 5%;
+    margin-bottom: 20px;
+}
+
+.espacio1_1{
+    margin-top: 20px;
+}
+
+h2{
+     font-size: 16px;
+     font-weight: bold; 
+}
+
+
+.semestre {
+    margin-top: 80px;
+    float: right;
+    padding: 10px;
+    background-color: #1D2B35;
+    opacity: 0.8;
+    margin-right: 5%;
   
+    margin-bottom: 20px;
 }
-
-.espacio {
- 
-  margin-top: 40px;
-}
-
-.espacios{
-    margin-top: 10px;
-}
-
-
-.espacio1 {
-  
-  margin-top: 40px;
-}
-
 
 .espacio1_2{
-     margin-top: 10px;
-    
+    margin-top: 20px;
 }
 
-.espacio2 {
-  
-  margin-top: 40px;
+.anualidad {
+    margin-top: 30px;
+    float: right;
+    padding: 10px;
+    background-color: #1D2B35;
+    opacity: 0.8;
+    margin-bottom: 20px;
 }
 
-.espacio2_2{
-    
-    margin-top: 10px; 
+.espacio1_3{
+    margin-top: 20px;
 }
 .table {
-  margin: auto;
-  color:white; 
+    margin: auto;
+    color:white;
+}
 
-  
+.mensualidad {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 5%;
+}
+
+.semestre, .anualidad, .semestre {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
 }
