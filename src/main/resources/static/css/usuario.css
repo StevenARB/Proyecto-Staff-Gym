@@ -35,3 +35,9 @@ li a:hover:not(.active) {
     background-color: #4c4c4c;
     color: white;
 }
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-align: left;
+}
