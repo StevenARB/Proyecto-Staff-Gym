@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Staff Gym</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="css/adquirirMembresia.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Funcionalidades</h1>
+            <!-- g-3= margen entre los elementos -->
+            <!-- needs-validation= indicar que se va hacer una  validación -->
+            <form class="row g-3 needs-validation" novalidate>
+                <div>
+                    <div class="col-md-4"> <!-- columna tendrá un ancho de 4 columnas en la vista de tamaño mediano (md) -->
+                        <label for="validationCustom01" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="validationCustom01" value required>      
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Apellido </label>
+                        <input type="text" class="form-control" id="validationCustom01" value required>
+                        <div class="valid-feedback">
+                            No estas haciendo tu rutina.
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Tipo de rutina</label>
+                        <input type="text" class="form-control" id="validationCustom01" value required>
+                        <div class="valid-feedback">
+                            Rutina adecuada
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="validationCustomUsername" class="form-label">Meta a Alcanzar</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Porfavor escoge tu meta
+                                </div>
+                                </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="validationCustom01" class="form-label">Metas Alcanzadas</label>
+                                    <input type="text" class="form-control" id="validationCustom01" value required>
+                                    <div class="valid-feedback">
+                                        Trabaja duro! Come saludable.
+                                    </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                    <!-- Datos de las instalaciones -->
+                    <div class="container2"> 
+
+                        <form class="row g-3 needs-validation" novalidate>
+            
+                            <h1 id="Tiulo2">Necesidades Salud</h1>
+            
+                            <div class="col-md-4"> <!-- columna tendrá un ancho de 4 columnas en la vista de tamaño mediano (md) -->
+                                <label for="validationCustom01" class="form-label">Enfermedades</label>
+                                <input type="text" class="form-control" id="validationCustom01" value required>      
+                            </div>
+                
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Vicios</label>
+                                <input type="text" class="form-control" id="validationCustom01" value required>
+                                <div class="valid-feedback">
+                                    Necesitas mejorar
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Operaciones</label>
+                                <input type="text" class="form-control" id="validationCustom01" value required>
+                                <div class="valid-feedback">
+                                    Debes de mejorar...
+                                </div>
+                            </div> 
+
+                            <div class="container3"> 
+                                <input class="btn btn-primary" type="reset" value="Aceptar" onclick="window.location.href = 'https://www.google.com';">
+                                <button type="button" class="btn btn-danger">Ayuda llama a emergencias</button>
+                    
+                        </form> 
+                    </div>
+
+        </div>
+    </body>
