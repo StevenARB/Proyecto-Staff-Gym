@@ -1,10 +1,10 @@
 body {
-    background: url("../images/Nosotros_1.jpg");
+   background-color:  #141414;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
-    background-color: rgba(3, 2, 1, 0.5)
+   
 } 
 
 /*
