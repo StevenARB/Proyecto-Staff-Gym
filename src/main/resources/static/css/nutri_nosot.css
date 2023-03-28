@@ -1,83 +1,83 @@
 body {
-    background: url("../images/Nosotros_1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    background-color: rgba(3, 2, 1, 0.5)
+  background: url("../images/1134.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  background-color: rgba(3, 2, 1, 0.5)
 } 
 
 /*
 mark.crimson {
-    color: crimson;
-    background-color: rgba(0, 0, 0, 0); 
+  color: crimson;
+  background-color: rgba(0, 0, 0, 0); 
 }
 //*---*/
 
 li a {
-    color:snow !important;
-    text-decoration: solid !important;
+  color:snow !important;
+  text-decoration: solid !important;
 }
 
 .image {
-    width:32%;
-    height:auto;
-    position:absolute;
-    bottom:50px;
-    right:160px;
-    flex:1;
+  width:32%;
+  height:auto;
+  position:absolute;
+  bottom:50px;
+  right:160px;
+  flex:1;
 }
 
 .container {
-    text-align: center;
-    color:white;
-  }
+  text-align: center;
+  color:white;
+}
 
-  .espacio {
- 
-    margin-top: 30px;
-  }
-  
+.espacio {
+
+  margin-top: 30px;
+}
+
 h1 {
-    color:blanchedalmond;
-    text-align: center;
+  color:blanchedalmond;
+  text-align: center;
 }
 
 nav {
-    background: #161616;
-    padding: 2vh;
+  background: #161616;
+  padding: 2vh;
 }
 
 li a {
-    color: white !important;
+  color: white !important;
 }
 
 .espacios{
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 
 .espacio1 {
-  
-  margin-top: 40px;
+
+margin-top: 40px;
 }
 
 .espacio1_2{
-     margin-top: 10px;
-    
+   margin-top: 10px;
+  
 }
 
 .espacio2 {
-  
-  margin-top: 40px;
+
+margin-top: 20px;
 }
 
 .espacio2_2{
-    
-    margin-top: 10px; 
+  
+  margin-top: 9px; 
 }
 .table {
-  margin: auto;
-  color:white; 
+margin: auto;
+color:white; 
 
 }

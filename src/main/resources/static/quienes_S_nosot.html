@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Staff Gym</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="css/quienes_S_nosot.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Quienes Somos?</h1>
+            <!-- g-3= margen entre los elementos -->
+            <!-- needs-validation= indicar que se va hacer una  validación -->
+            <form class="row g-3 needs-validation" novalidate>
+
+                <div>
+                    <div class="col-md-4"> <!-- columna tendrá un ancho de 4 columnas en la vista de tamaño mediano (md) -->
+                        <label for="validationCustom01" class="form-label">Tiempo en el mercado 50 anos: </label>
+                        <input type="text" class="form-control" id="validationCustom01" value required>      
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Miembros de nuestro equipo:</label>
+                        <input type="text" class="form-control" id="validationCustom01" value required>
+                        <div class="valid-feedback">
+                            No eres usuario, bye. 
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Numero de miembro</label>
+                        <input type="text" class="form-control" id="validationCustom01" value required>
+                        <div class="valid-feedback">
+                            No eres miembro. 
+                        </div>
+
+                        <div class="container3"> 
+                            <input class="btn btn-primary" type="reset" value="Aceptar" onclick="window.location.href = 'https://www.google.com';">
+                            <button type="button" class="btn btn-danger">Ayuda llama a seguridad</button>
+                
+                    </form> 
+                </div>
+
+    </div>
+</body>
