@@ -27,6 +27,11 @@
         </header>
         <div style="margin-left:12vw;padding:1px 16px;height:1000px;">
             <h1 th:text="${titulo}"></h1>
+            <div class="input-group mb-3" style="width: 20vw; display: inline-flex">
+                <input type="text" class="form-control" placeholder="Ingresar Cédula" aria-label="Ingresar Cédula" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="">Buscar</button>
+            </div>
+            <button type="button" class="btn btn-primary float-end" th:action="@{/crearUsuario}">Nuevo</button>
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>

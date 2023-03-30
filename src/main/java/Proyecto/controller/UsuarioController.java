@@ -24,7 +24,7 @@ public class UsuarioController {
     @GetMapping("/usuario")
     public String index(Model model) {
         List<Usuario> listaUsuario = usuarioService.getAllUsuario();
-        model.addAttribute("titulo", "Tabla de Usuarios");
+        model.addAttribute("titulo", "Usuarios");
         model.addAttribute("usuarios", listaUsuario);
         return "usuario";
     }
