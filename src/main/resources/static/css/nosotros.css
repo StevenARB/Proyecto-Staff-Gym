@@ -7,12 +7,12 @@ body {
    
 } 
 
-/*
+
 mark.crimson {
     color: crimson;
-    background-color: rgba(0, 0, 0, 0); 
+    background-color: rgba(2, 2, 2, 0); 
 }
-//*---*/
+
 
 li a {
     color:snow !important;
@@ -44,7 +44,7 @@ h1 {
 }
 
 nav {
-    background: #161616;
+    background: black;
     padding: 2vh;
 }
 
@@ -80,4 +80,9 @@ li a {
   margin: auto;
   color:white; 
 
+}
+
+p{ 
+    color:white;
+    text-align: center;
 }
