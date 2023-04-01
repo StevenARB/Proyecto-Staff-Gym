@@ -9,6 +9,7 @@ import java.util.List;
  */
 public interface IUsuarioService {
     public List<Usuario> getAllUsuario();
+    public List<Usuario> getPersonaByCedula(String cedula);
     public Usuario getUsuarioById (long id);
     public void saveUsuario(Usuario usuario);
     public void delete (long id);

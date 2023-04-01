@@ -36,9 +36,37 @@ li a:hover:not(.active) {
     color: white;
 }
 
-h1 {
+h2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    text-align: center;
+    color: #4c4c4c;
     margin-top: 2vh;
+}
+
+.contenedor {
+    margin-left: 12vw;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+.sub-contenedor {
+    margin-left: 0.1vw;
+    margin-top: 2vh;
+    padding: 1px 16px;
+}
+
+.form-group-label {
+    display: block;
+}
+
+.form-group-input {
+    display: inline-block; 
+    width: 25vh; 
+}
+
+.horizontal-line {
+    margin: 0;
+    width: 35vw;
+    color: black;
+    padding-bottom: 0.1vh;
 }

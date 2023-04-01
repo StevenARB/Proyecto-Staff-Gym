@@ -12,13 +12,18 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UsuarioService implements IUsuarioService {
-    
+
     @Autowired
     private UsuarioRepository usuarioRepository;
 
     @Override
     public List<Usuario> getAllUsuario() {
-        return (List<Usuario>)usuarioRepository.findAll();
+        return (List<Usuario>) usuarioRepository.findAll();
+    }
+
+    @Override
+    public List<Usuario> getPersonaByCedula(String cedula) {
+        return (List<Usuario>) usuarioRepository.findByCedula(cedula);
     }
 
     @Override
