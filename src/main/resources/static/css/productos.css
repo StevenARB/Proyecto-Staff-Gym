@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: #292828;
+    background-position: center;
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+    
+}
+a{
+    text-decoration: none;
+    
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 90px;
+    
+    
+}
+
+.content{
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+        0 10px 10px rgba(0,0,0,0.22);
+    transition: .4s;
+    background: #DADADA ;
+    
+    
+}
+
+.content:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 
+        0 3px 6px rgba(0,0,0,0.23);
+    transform: translate(0px, -8px);
+    
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+p{
+    text-align: center;
+    color: #737373;
+    padding-top:0 8px;
+    
+}
+
+h6{
+    font-size: 26px;
+    text-align: center;
+    color: #EB1010;
+    margin: 0;
+    
+}
+
+
+
+button{
+    text-align: center;
+    font-size: 24px;
+    color: #DADADA;
+    width: 100%;
+    padding:15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius:20px; 
+   
+}
+
+.buy-1{
+    background: #605233;
+   }
+
+
+.buy-2{
+    background: #EECD9B ;
+  
+    
+}
+
+
+.buy-3{
+    background: #EB1010;
+   
+    
+}
+
+
+.buy-4{
+    background: #101EEB;
+   
+    
+}
+
+
+.buy-5{
+    background: #45AD0D;
+   
+    
+}
+
+.buy-6{
+    background: #AD9C0D;
+    
+    
+}
+
+/*defetuoso*/
+.buy-7{
+    background: #EB1010;
+    
+   
+    
+}
+
+/*defetuoso*/
+.buy-8{
+    background: #FFFFFF;
+    
+    
+}
+
+
+.buy-9{
+    background: #B97C28;
+   
+    
+}
+
+.buy-10{
+    background: #05ABEE ;
+    
+    
+}
+/*defetuoso*/
+.buy-11{
+    background: #4DD253 ;
+    
+}
+
+.buy-12{
+    background: #FFFFFF ;
+    
+}
+
+
+.buy-13{
+    background: #EB1010   ;
+    
+}
+
+
+.buy-14{
+    background: #10AD95  ;
+    
+}
+
+
+.buy-15{
+    background: #FAB7C4    ;
+    
+}
+
+
+.buy-16{
+    background: #737373 ;
+    
+}
+
+
+.buy-17{
+    background:   #55BAA2;
+    
+}
+
+
+.buy-18{
+    background: #000000  ;
+    
+}
+
+
+.buy-19{
+    background: #2EB6AD;
+    
+}
+
+
+.buy-20{
+    background: #000000;
+    
+}
+
+
+.buy-21{
+    background: #000000 ;
+    
+}
+
+
+.buy-22{
+    background: #000000;
+    
+}
+
+
+.buy-23{
+    background: #000000;
+    
+}
+
+
+.buy-24{
+    background: #DF0D93 ;
+    
+}
+
+
+.buy-25{
+    background: #E891AD ;
+    
+}
+
+
+.buy-26{
+    background: #E891AD  ;
+    
+}
+
+.buy-27{
+    background: #000000;
+    
+}
+
+
+.buy-28{
+    background: #626061;
+    
+}
+
+
+.buy-29{
+    background: #799568 ;
+    
+}
+
+
+.buy-30{
+    background: #E891AD;
+    
+}
+
+
+.buy-31{
+    background: #000000;
+    
+}
+
+
+.buy-32{
+    background: #000000;
+    
+}
+
+
+.buy-33{
+    background: #696B68  ;
+    
+}
+
+
+.buy-34{
+    background: #E9A1B3 ;
+    
+}
+
+
+.buy-35{
+    background: #000000;
+    
+}
+
+
+.buy-36{
+    background: #838383;
+    
+}
+
+
+.buy-37{
+    background: #838383;
+    
+}
+
+
+.buy-38{
+    background: #000000 ;
+    
+}
+
+
+.buy-39{
+    background: #3681E7 ;
+    
+}
+
+.buy-40{
+    background: #838383;
+    
+}
+
+
+.buy-41{
+    background: #AB3432 ;
+    
+}
+
+
+.buy-42{
+    background: #FFFFFF;
+    
+}
+
+
+.buy-43{
+    background: #3570A7 ;
+    
+}
+
+
+.buy-44{
+    background: #870000 ;
+    
+}
+
+.buy-45{
+    background: #719252 ;
+    
+}
+
+
+.buy-46{
+    background: #ABB4A3   ;
+    
+}
+
+
+.buy-47{
+    background: #16DEBC  ;
+    
+}
+
+
+.buy-48{
+    background: #709191  ;
+    
+}
+
+
+.buy-49{
+    background: #626061;
+    
+}
+
+
+.buy-50{
+    background: #0866D8 ;
+    
+}
+
+.buy-51{
+    background: #000000 ;
+    
+}
+
+.buy-52{
+    background: #EB1010;
+    
+}
+
+.buy-53{
+    background: #626061 ;
+    
+}
+
+.buy-54{
+    background: #E891AD ;
+    
+}
+
+.buy-55{
+    background: #B97C28 ;
+    
+}
+
+.buy-56{
+    background: #000000 ;
+    
+}
+
+.buy-57{
+    background: #799568 ;
+    
+}
+
+
+.buy-58{
+    background: #E891AD ;
+    
+}
+
+
+.buy-59{
+    background: #000000 ;
+    
+}
+
+
+.buy-60{
+    background: #FA435C  ;
+    
+}
+
+
+
+
+
+
+@media(max-width:1000px){
+    .content{
+        width: 45%;
+    }
+}
+
+@media(max-width:750px){
+    .content{
+        width: 100%;
+    }
+}
+
+
+body {
+    background: url("../images/fondoIndex.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #161616;
+    margin: 0;
+}
+
+nav {
+    background-color: rgba(1, 1, 1, 0.5);
+    padding: 1em;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 5vmax;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: #EB1010;
+    margin-top: 5vh;
+}
+
+mark.crimson {
+    color: crimson;
+    background-color: rgba(0, 0, 0, 0); 
+}
+
+li a {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff !important;
+}
+
+.content-text {
+    color: white;
+    margin-top: 1000px;
+}
