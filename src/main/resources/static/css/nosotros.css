@@ -1,88 +1,38 @@
-body {
-   background-color: #141414;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-   
-} 
-
-
-mark.crimson {
-    color: crimson;
-    background-color: rgba(2, 2, 2, 0); 
+*{
+  font-family:montserrat;
 }
-
-
-li a {
-    color:snow !important;
-    text-decoration: solid !important;
+body{
+  background: f1fbff;
 }
-
-.image {
-    width:32%;
-    height:auto;
-    position:absolute;
-    bottom:50px;
-    right:160px;
-    flex:1;
+.section-padding{
+  padding:100px 0;
 }
-
-.container {
-    text-align: center;
-    color:white;
-  }
-
-  .espacio {
- 
-    margin-top: 30px;
-  }
-  
-h1 {
-    color:blanchedalmond;
-    text-align: center;
+.carousel-item{
+  height:100vh;
+  min-height: 300px;
 }
-
-nav {
-    background: black;
-    padding: 2vh;
+.carousel-caption{
+  bottom:220px;
+  z-index:2;
 }
-
-li a {
-    color: white !important;
+.carousel-caption h5{
+font-size:45px;
+text-transform:uppercase;
+letter-spacing: 2px;
+margin-top:25px;
 }
-
-.espacios{
-    margin-top: 10px;
+.carousel-caption p{
+width: 60%;
+margin:auto;
+font-size:18px;
+line-height: 1.9;
 }
-
-
-.espacio1 {
-  
-  margin-top: 40px;
-}
-
-.espacio1_2{
-     margin-top: 10px;
-    
-}
-
-.espacio2 {
-  
-  margin-top: 40px;
-}
-
-.espacio2_2{
-    
-    margin-top: 10px; 
-}
-.table {
-  margin: auto;
-  color:white; 
-
-}
-
-p{ 
-    color:white;
-    text-align: center;
+.carousel-inner::before{
+  content:'';
+  postion:absolute;
+  width: 100%;
+  height:100%;
+  top:0;
+  left:0;
+  background: rgba(0, 0, 0, 0, 7)
 }
