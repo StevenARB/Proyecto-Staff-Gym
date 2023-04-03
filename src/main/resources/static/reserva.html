@@ -1,120 +1,108 @@
 <!DOCTYPE html>
 <html lang="en-es">
-<head>
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="stylesheet" href="css/reserva.css"/>
-          <title>RESERVACION</title>
+        <link rel="stylesheet" href="css/reserva.css"/>
+        <title>RESERVACION</title>
     </head>
-
- <body>
+    <body>
         <div>
             <header>
                 <nav class="sticky-top">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Inicio</a>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-ite  m">
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pag 1</a>
+                            <a class="nav-link" href="nosotros.html">Acerca</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pag 2</a>
+                            <a class="nav-link" href="productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pag 3</a>
+                            <a class="nav-link" href="#">Reservar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pag 4</a>
+                            <a class="nav-link" href="#">Equipo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="productos.html">Pag 5</a>
+                            <a class="nav-link" href="login.html">Log In</a>
                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link" href="reserva.html">Pag 6</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="foro.html">Foro</a>
                         </li>
                     </ul>
                 </nav>
-               
             </header>
-           
         </div>
-              
-           
-       
     </body>
-        <div class="container">
-            <div class="form-image">
-                <img src="images/icon.jpg">
-              </div>
-            <div class="form">
-                <form action="#">
-                    <div class="form-header">
-                        <div class="title"><!-- comment -->
-                            <h1>RESERVACION</h1>
+    <div class="container">
+        <div class="form-image">
+            <img src="images/icon.jpg">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title"><!-- comment -->
+                        <h1>RESERVACION</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="confirmar.html">Reservar</a></button>
+
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="Nombre" placeholder="Ingrese su Nombre">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Apellido">Apellido</label>
+                        <input type="text" name="Apellido" placeholder="Ingrese su Apellido">
+                    </div>
+                    <div class="input-box">
+                        <label for="Email">Email</label>
+                        <input type="email" name="Email" placeholder="Ingrese su Email">
+                    </div>
+                    <div class="input-box">
+                        <label for="telefono">Telefono</label>
+                        <input type="number" name="telefono" placeholder="Ingrese su Telefono">
+                    </div>
+                    <div class="input-box">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" name="fecha" placeholder="Ingrese el dia">
+                    </div>
+                    <div class="input-box">
+                        <label for="hora">Hora</label>
+                        <input type="time" name="hora" placeholder="Ingrese la hora">
+                    </div>
+                </div>
+                <div class="gender-group">
+                    <div class="gender-input">
+                        <h6>Genero</h6>
+                    </div>
+                    <div class="gender-group"><!-- comment -->
+                        <div class="gender-input"><!-- comment -->
+                            <input type="radio" id="femenino" name="gender">
+                            <label for="femenino">Femenino</label><!-- comment -->
                         </div>
-                        <div class="login-button">
-                            <button><a href="confirmar.html">Reservar</a></button>
-                            
+                        <div class="gender-input"><!-- comment -->
+                            <input type="radio" id="masculino" name="gender">
+                            <label for="masculino">Masculino</label><!-- comment -->
+                        </div>
+                        <div class="gender-input"><!-- comment -->
+                            <input type="radio" id="otro" name="gender">
+                            <label for="otro">Otro</label><!-- comment -->
+                        </div>
+                        <div class="gender-input"><!-- comment -->
+                            <input type="radio" id="Nada" name="gender">
+                            <label for="Nada">Prefiero No decir</label><!-- comment -->
                         </div>
                     </div>
-                     <div class="input-group">
-                      <div class="input-box">
-                          <label for="Nombre">Nombre</label>
-                          <input type="text" name="Nombre" placeholder="Ingrese su Nombre">
-                          </div>
-                 
-                      <div class="input-box">
-                          <label for="Apellido">Apellido</label>
-                          <input type="text" name="Apellido" placeholder="Ingrese su Apellido">
-                          </div>
-                           <div class="input-box">
-                          <label for="Email">Email</label>
-                          <input type="email" name="Email" placeholder="Ingrese su Email">
-                          </div>
-                           <div class="input-box">
-                          <label for="telefono">Telefono</label>
-                          <input type="number" name="telefono" placeholder="Ingrese su Telefono">
-                          </div>
-                           <div class="input-box">
-                          <label for="fecha">Fecha</label>
-                          <input type="date" name="fecha" placeholder="Ingrese el dia">
-                          </div>
-                          <div class="input-box">
-                          <label for="hora">Hora</label>
-                          <input type="time" name="hora" placeholder="Ingrese la hora">
-                          </div>
-                         </div>
-                      <div class="gender-group">
-                      <div class="gender-input">
-                          <h6>Genero</h6>
-                          </div>
-                          <div class="gender-group"><!-- comment -->
-                              <div class="gender-input"><!-- comment -->
-                                  <input type="radio" id="femenino" name="gender">
-                                  <label for="femenino">Femenino</label><!-- comment -->
-                                    </div>
-                              <div class="gender-input"><!-- comment -->
-                                  <input type="radio" id="masculino" name="gender">
-                                  <label for="masculino">Masculino</label><!-- comment -->
-                                    </div>
-                                <div class="gender-input"><!-- comment -->
-                                  <input type="radio" id="otro" name="gender">
-                                  <label for="otro">Otro</label><!-- comment -->
-                                    </div>
-                               <div class="gender-input"><!-- comment -->
-                                  <input type="radio" id="Nada" name="gender">
-                                  <label for="Nada">Prefiero No decir</label><!-- comment -->
-                                    </div>
-                           
-                            
-                        </div>
-                          
-                          
-                    
-                      
-                </form>
-            </div>
+            </form>
         </div>
-    </body>
+    </div>
+</body>
 </html>
