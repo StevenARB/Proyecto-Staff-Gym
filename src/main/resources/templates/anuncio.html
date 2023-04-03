@@ -26,14 +26,60 @@
             </nav>
         </header>
         <div style="margin-left:12vw;padding:1px 16px;height:1000px;">
-            <p>Contenido</p>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Launch demo modal
-            </button>
-
-            <!-- Modal -->
-            
+            <h1 th:text="${tituloh1anuncio}"></h1>
+            <form th:action="@{/anuncioTitulo}" style="display: inline-block">
+                <div class="input-group mb-3" style="width: 20vw">
+                    <input type="text" name="titulo" class="form-control" placeholder="Ingresar Título" aria-label="Ingresar Título" aria-describedby="button-addon2" th:value="${titulo}" required>
+                    <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="Buscar"/>
+                    &nbsp;&nbsp;
+                </div>
+            </form>
+            <a href="/anuncio"><i class="bi bi-arrow-clockwise" style="color: #cc0033; margin-right: 1vw"></i></a>
+            <a type="button" class="btn btn-primary float-end" th:href="@{/crearAnuncio}">Nuevo</a>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Mensaje</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col" style="text-align: center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <th:block th:each="anuncio : ${anuncios}">
+                    <tr>
+                        <td th:text="${anuncio.getTitulo}"></td>
+                        <td th:text="${anuncio.getFecha}"></td>
+                        <td class="message-size" th:text="${anuncio.getMensaje}"></td>
+                        <td>
+                            <img class="ad-image" th:src="@{${anuncio.getImagen}}"/>
+                        </td>
+                        <td style="text-align: center">
+                            <a type="button" class="btn btn-outline-secondary btn-sm" th:href="@{/actualizarAnuncio/{id}(id=${anuncio.getId})}">Actualizar</a>
+                            <a type="button" class="btn btn-outline-danger btn-sm" id="deleteAd" data-bs-toggle="modal" th:attr="data-bs-target='#deleteCheckModal'+${anuncio.getId}" style="margin-left: 1vw">Eliminar</a>
+                            <div class="modal fade" th:attr="id='deleteCheckModal'+${anuncio.getId}" tabindex="-1" aria-labelledby="deleteCheckLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="deleteCheckLabel">Eliminar Anuncio</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">¿Está seguro de eliminar este Anuncio?
+                                            <strong th:text="${anuncio.getTitulo}"></strong>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <a type="button" class="btn btn-danger" th:href="@{/eliminarAnuncio/{id}(id=${anuncio.getId})}">Eliminar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </th:block>
+                </tbody>
+            </table>
         </div>
     </body>
 </html>

@@ -22,7 +22,7 @@ public class UsuarioService implements IUsuarioService {
     }
 
     @Override
-    public List<Usuario> getPersonaByCedula(String cedula) {
+    public List<Usuario> getUsuarioByCedula(String cedula) {
         return (List<Usuario>) usuarioRepository.findByCedula(cedula);
     }
 

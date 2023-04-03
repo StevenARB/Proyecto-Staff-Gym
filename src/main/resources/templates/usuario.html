@@ -30,7 +30,7 @@
             <form th:action="@{/usuarioCedula}" style="display: inline-block">
                 <div class="input-group mb-3" style="width: 20vw">
                     <input type="text" name="cedula" class="form-control" placeholder="Ingresar Cédula" aria-label="Ingresar Cédula" aria-describedby="button-addon2" th:value="${cedula}" required>
-                    <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="Buscar" onclick="toggle();"/>
+                    <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="Buscar"/>
                     &nbsp;&nbsp;
                 </div>
             </form>
@@ -61,15 +61,17 @@
                         <td th:text="${usuario.getFecha}"></td>
                         <td style="text-align: center">
                             <a type="button" class="btn btn-outline-secondary btn-sm" th:href="@{/actualizarUsuario/{id}(id=${usuario.getId})}">Actualizar</a>
-                            <a type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 1vw">Eliminar</a>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <a type="button" class="btn btn-outline-danger btn-sm" id="deleteUser" data-bs-toggle="modal" th:attr="data-bs-target='#deleteCheckModal'+${usuario.getId}" style="margin-left: 1vw">Eliminar</a>
+                            <div class="modal fade" th:attr="id='deleteCheckModal'+${usuario.getId}" tabindex="-1" aria-labelledby="deleteCheckLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Eliminar Usuario</h5>
+                                            <h5 class="modal-title" id="deleteCheckLabel">Eliminar Usuario</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">¿Está seguro de eliminar este Usuario?</div>
+                                        <div class="modal-body">¿Está seguro de eliminar este Usuario?
+                                            <strong th:text="${usuario.getCedula}"></strong>
+                                        </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                             <a type="button" class="btn btn-danger" th:href="@{/eliminarUsuario/{id}(id=${usuario.getId})}">Eliminar</a>
