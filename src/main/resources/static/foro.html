@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
 <html>
     <head>
-        <title>Staff-Gym Foro</title>
+        <title>StaffGym Forum</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/foro.css"/>
-    </head>
+    </head>    
     <body>
         <div>
             <header>
@@ -41,9 +45,56 @@
                     </ul>
                 </nav>
             </header>
+        </div> 
+        <div class="center">
+            <h1>Crear foro</h1>
+            <form method="post">
+                
+                <div class="title_field">
+                    <input type="text" required>
+                    <label>Título</label>
+                </div>
+                <div class="name_field">
+                    <input type="text" required>
+                    <label>Nombre</label>     
+                </div>
+                
+                <div class="coment">
+                    <textarea name="comentario" rows="5" cols="5"
+                              placeholder="Escriba aqui">
+                        
+                    </textarea>
+
+                    <button type="submit" formmethod="post">Crear foro</button>
+                    
+                </div>
+            </form>
         </div>
-        <div>Staff-gym Forum</div>
         
+        <p>Respuestas</p>
         
+        <div class="response">
+            <!--<button onclick="showResponse()">Responder</button>-->
+            <form method="post">
+                <div class="name_field">
+                    <input type="text" required>
+                    <label>Nombre</label>
+                </div>
+                <div class="comment">
+                    <textarea name="comentario" rows="5" cols="5"
+                              placeholder="Escriba aqui">
+                        
+                    </textarea>
+
+                    <button type="submit" formmethod="post">Subir respuesta</button>
+                </div>
+            </form>
+            
+        </div>
+       <!-- <script>
+            function showResponse() {
+                document
+            }
+            </script> -->
     </body>
 </html>
