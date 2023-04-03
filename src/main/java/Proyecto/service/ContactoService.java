@@ -39,5 +39,15 @@ public class ContactoService implements IContactoService {
     public void delete(long id) {
         contactoRepository.deleteById(id);
     }
+
+    @Override
+    public List<Contacto> getContactoByApellidos(String apellidos) {
+       return (List<Contacto>) contactoRepository.findByApellidos(apellidos);
+    }
+
+    @Override
+    public Contacto findByNombre(String username) {
+      return contactoRepository.findByNombre(username);
+    }
     
 }

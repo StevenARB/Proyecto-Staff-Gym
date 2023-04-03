@@ -16,4 +16,7 @@ public interface IContactoService {
     public Contacto getContactoById (long id);
     public void saveContacto(Contacto contacto);
     public void delete (long id);
+    public List<Contacto> getContactoByApellidos(String apellidos);
+    public Contacto findByNombre (String username);
+    
 }
