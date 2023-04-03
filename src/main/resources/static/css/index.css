@@ -26,7 +26,7 @@ h1 {
 
 mark.crimson {
     color: crimson;
-    background-color: rgba(0, 0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0);
 }
 
 li a {
@@ -38,4 +38,3 @@ li a {
     color: white;
     margin-top: 1000px;
 }
-
