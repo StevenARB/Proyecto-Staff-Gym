@@ -10,6 +10,10 @@ CREATE TABLE `usuarios` (
   `email` varchar(75) DEFAULT NULL,
   `telefono` varchar(9) NOT NULL,
   `fecha` varchar(10) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `permissions` varchar(45) NOT NULL,
+  `roles` varchar(45) NOT NULL,
+  `active` INT NOT NULL,
   PRIMARY KEY (`id`)
 ) ;
 
