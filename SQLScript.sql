@@ -23,3 +23,20 @@ ALTER TABLE `usuarios`(
   `roles` varchar(45) NOT NULL,
   `active` INT NOT NULL,
   );
+
+
+CREATE TABLE `contacto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `apellidos` varchar(45) NOT NULL,
+  `provincia` varchar(45) NOT NULL,
+  `ubicacion` varchar(45) NOT NULL,
+  `telefono` varchar(9) NOT NULL,
+  `email` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+INSERT INTO `contacto` VALUES (1,'Luis','Guerrero Mora','San Jose','Del barrio chino sube ','8989-9090','luisgm98@gmail.com');
+INSERT INTO `contacto` VALUES (2,'Jorge','Mora Artavia','Cartago', 'De la esquina subiendo','7478-5678','brmoque123@gmail.com');
+INSERT INTO `contacto` VALUES (3,'María','Flores Miranda','Heredia','De la esquina bajando','2565-0925','marflomi32@gmail.com');
