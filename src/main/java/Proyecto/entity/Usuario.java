@@ -6,6 +6,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -20,6 +23,8 @@ public class Usuario implements Serializable {
     private long id;
 
     private String nombre, apellido1, apellido2, cedula, email, telefono, fecha;
+    private String password, roles=" ", permissions=" ";
+    private int active;
 
     public long getId() {
         return id;
@@ -84,5 +89,36 @@ public class Usuario implements Serializable {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<String> getRoleList() {
+        if(this.roles.length() > 0) {
+            return Arrays.asList(this.roles.split(","));
+        }
+        return new ArrayList<>();
+    }
+
+    public List<String> getPermissionList() {
+        if(this.permissions.length() > 0) {
+            return Arrays.asList(this.permissions.split(","));
+        }
+        return new ArrayList<>();
+    }
+
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+    
 
 }
