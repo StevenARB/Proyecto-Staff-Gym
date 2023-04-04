@@ -33,7 +33,7 @@ public class UsuarioController {
 
     @RequestMapping("/usuarioCedula")
     public String buscarCedula(Model model, @Param("cedula") String cedula) {
-        List<Usuario> listaUsuario = usuarioService.getPersonaByCedula(cedula);
+        List<Usuario> listaUsuario = usuarioService.getUsuarioByCedula(cedula);
         model.addAttribute("titulo", "Usuarios");
         model.addAttribute("usuarios", listaUsuario);
         return "usuario";
