@@ -1,68 +1,48 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : Apr 2, 2023, 6:59:51 PM
-    Author     : aaron
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    font-family: 'Fira Sans', sans-serif;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Righteous&display=swap');
+body {
+    background: rgba(12,12,12,0.5);
+    margin: 0;
 }
 
-body{
-    background: linear-gradient(120deg,#65098C,#E68BFA);
-    height:100vh;
-    overflow:hidden;
+nav {
+    background-color: rgba(1, 1, 1, 0.5);
 }
 
-.center{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:400px;
-    background-color: white;
-    border-radius:10px;
+li a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: white !important;
 }
 
-.center h1{
-    text-align:center;
-    padding:20px 0; /*padding:20px 0 0 0 (top right bottom left)*/
-    border-bottom:1px solid silver;
+li a:hover:not(.active) {
+    color: crimson !important;
 }
 
-.center form{
-    padding:0 40px;
+.brand-font {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
 }
 
-form .txt_field{
-    position:relative;
-    border-bottom: 2px solid #adadad;
-    margin:30px 0;
+.pregunta{
+    font-family: 'Open Sans', sans-serif;
+    
 }
 
-.txt_field input{
-    width:100%;
-    padding: 05px;
-    height:40px;
-    font-size:16px;
-    border:none;
-    background:none;
-    outline:none;
+.heading_foro{
+    margin-bottom: 10px; 
+}
+.title_field{
+    
 }
 
-.txt_field label {
-    position:absolute;
-    top:50%;
-    left:5px;
-    color:#adadad;
-    transform:translateY(-50%);
-    font-size:16px;
+.heading_foro{
+    color:#ffc107;
+}
+
+.response{
+    font-family: 'Open Sans', sans-serif;
+    color:#ffc107;
+    padding-left: 70%;
+    margin-bottom: 150%;
+
 }

@@ -46,45 +46,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </nav>
             </header>
         </div> 
-        <div class="center">
-            <h1>Crear foro</h1>
+        <div class="pregunta">
+            <h3 class="heading_foro">Crear foro</h3>
             <form method="post">
                 
                 <div class="title_field">
-                    <input type="text" required>
-                    <label>Título</label>
-                </div>
-                <div class="name_field">
-                    <input type="text" required>
-                    <label>Nombre</label>     
+                    <input type="text" placeholder="Titulo" required>
                 </div>
                 
-                <div class="coment">
-                    <textarea name="comentario" rows="5" cols="5"
-                              placeholder="Escriba aqui">
-                        
-                    </textarea>
+                <div class="name_field">
+                    <input type="text" placeholder="Nombre" required> 
+                </div>
+                
+                <div class="form-floating">
+                    <br>
+                    <textarea class="form-control" placeholder="Digite su opinion aqui" 
+                              id="floatingTextarea2" style="height: 100px" required></textarea>
+                              
 
-                    <button type="submit" formmethod="post">Crear foro</button>
+                    <button type="submit">Crear foro</button>
                     
                 </div>
             </form>
         </div>
         
-        <p>Respuestas</p>
-        
         <div class="response">
+            <h4>Respuestas</h4>
             <!--<button onclick="showResponse()">Responder</button>-->
             <form method="post">
                 <div class="name_field">
-                    <input type="text" required>
-                    <label>Nombre</label>
+                    <input type="text" placeholder="nombre" required>
                 </div>
                 <div class="comment">
-                    <textarea name="comentario" rows="5" cols="5"
-                              placeholder="Escriba aqui">
-                        
-                    </textarea>
+                    <textarea class="form-control" placeholder="Digite su respuesta aqui" 
+                              id="floatingTextarea2" style="height: 100px" required></textarea>
 
                     <button type="submit" formmethod="post">Subir respuesta</button>
                 </div>
