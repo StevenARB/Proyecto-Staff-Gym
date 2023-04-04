@@ -21,7 +21,7 @@ margin-top:25px;
 .carousel-caption p{
 width: 60%;
 margin:auto;
-font-size:18px;
+font-size:  100px;
 line-height: 1.9;
 }
 .carousel-inner::before{
@@ -46,10 +46,45 @@ line-height: 1.9;
   font-weight:700;
   letter-spacing: 2px;
 }
-<<<<<<< HEAD
-.navbar-light .nav-brand:focus,
-.navbar-light .nav-brand:hover{
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover{
+  color:#000
+}
+.navbar-light .navbar-nav .navbar-link{
   color:#000;
 }
-=======
->>>>>>> 46451dba88b05c6b768035b00a8ca777559e9ca9
+.w-100{
+  height: 100vh;
+
+} /*Aqui podemos visualizar que la pagina comienza a ser responsive*/
+
+@media only screen and(min-width: 768px) and (max-width: 991px){
+  .carousel-caption{
+    bottom: 365px;
+  }
+  .carousel-caption p{
+    width: 100%;
+}
+
+
+@media only screen and (max-width:767px){
+  .navbar-nav{
+    text-align: center;
+  }
+  .carousel-caption{
+    bottom:125px;
+  }
+  .carousel-caption h5{
+    padding:10px 15px;
+    font-size: 17px;
+  }
+  .carousel-caption a{
+    padding:10px 15px;
+  }
+  .carousel-caption p{
+    width: 100px;
+    line-height: 1.6;
+    font-size: 12px;
+  }
+}
+}
