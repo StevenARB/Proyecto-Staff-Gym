@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Righteous&display=swap');
 
 body{
     margin: 0;
@@ -7,16 +7,35 @@ body{
     background-position: center;
 }
 
+nav {
+    background-color: rgba(1, 1, 1, 0.5);
+}
+
+li a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: white !important;
+}
+
+li a:hover:not(.active) {
+    color: crimson !important;
+}
+
+.brand-font {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+}
+
 h3{
     text-align: center;
     font-size: 30px;
     margin: 0;
     padding-top: 10px;
-    
+
 }
 a{
     text-decoration: none;
-    
+
 }
 
 .gallery{
@@ -26,8 +45,8 @@ a{
     justify-content: center;
     align-items: center;
     margin: 50px 90px;
-    
-    
+
+
 }
 
 .content{
@@ -43,15 +62,15 @@ a{
         0 10px 10px rgba(0,0,0,0.22);
     transition: .4s;
     background: #DADADA ;
-    
-    
+
+
 }
 
 .content:hover{
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
         0 3px 6px rgba(0,0,0,0.23);
     transform: translate(0px, -8px);
-    
+
 }
 
 img{
@@ -66,7 +85,7 @@ p{
     text-align: center;
     color: #737373;
     padding-top:0 8px;
-    
+
 }
 
 h6{
@@ -74,7 +93,7 @@ h6{
     text-align: center;
     color: #EB1010;
     margin: 0;
-    
+
 }
 
 
@@ -90,362 +109,362 @@ button{
     cursor: pointer;
     margin-top: 5px;
     border-bottom-right-radius:20px;
-    border-bottom-left-radius:20px; 
-   
+    border-bottom-left-radius:20px;
+
 }
 
 .buy-1{
     background: #605233;
-   }
+}
 
 
 .buy-2{
     background: #EECD9B ;
-  
-    
+
+
 }
 
 
 .buy-3{
     background: #EB1010;
-   
-    
+
+
 }
 
 
 .buy-4{
     background: #101EEB;
-   
-    
+
+
 }
 
 
 .buy-5{
     background: #45AD0D;
-   
-    
+
+
 }
 
 .buy-6{
     background: #AD9C0D;
-    
-    
+
+
 }
 
 /*defetuoso*/
 .buy-7{
     background: #EB1010;
-    
-   
-    
+
+
+
 }
 
 /*defetuoso*/
 .buy-8{
     background: #FFFFFF;
-    
-    
+
+
 }
 
 
 .buy-9{
     background: #B97C28;
-   
-    
+
+
 }
 
 .buy-10{
     background: #05ABEE ;
-    
-    
+
+
 }
 /*defetuoso*/
 .buy-11{
     background: #4DD253 ;
-    
+
 }
 
 .buy-12{
     background: #FFFFFF ;
-    
+
 }
 
 
 .buy-13{
     background: #EB1010   ;
-    
+
 }
 
 
 .buy-14{
     background: #10AD95  ;
-    
+
 }
 
 
 .buy-15{
     background: #FAB7C4    ;
-    
+
 }
 
 
 .buy-16{
     background: #737373 ;
-    
+
 }
 
 
 .buy-17{
     background:   #55BAA2;
-    
+
 }
 
 
 .buy-18{
     background: #000000  ;
-    
+
 }
 
 
 .buy-19{
     background: #2EB6AD;
-    
+
 }
 
 
 .buy-20{
     background: #000000;
-    
+
 }
 
 
 .buy-21{
     background: #000000 ;
-    
+
 }
 
 
 .buy-22{
     background: #000000;
-    
+
 }
 
 
 .buy-23{
     background: #000000;
-    
+
 }
 
 
 .buy-24{
     background: #DF0D93 ;
-    
+
 }
 
 
 .buy-25{
     background: #E891AD ;
-    
+
 }
 
 
 .buy-26{
     background: #E891AD  ;
-    
+
 }
 
 .buy-27{
     background: #000000;
-    
+
 }
 
 
 .buy-28{
     background: #626061;
-    
+
 }
 
 
 .buy-29{
     background: #799568 ;
-    
+
 }
 
 
 .buy-30{
     background: #E891AD;
-    
+
 }
 
 
 .buy-31{
     background: #000000;
-    
+
 }
 
 
 .buy-32{
     background: #000000;
-    
+
 }
 
 
 .buy-33{
     background: #696B68  ;
-    
+
 }
 
 
 .buy-34{
     background: #E9A1B3 ;
-    
+
 }
 
 
 .buy-35{
     background: #000000;
-    
+
 }
 
 
 .buy-36{
     background: #838383;
-    
+
 }
 
 
 .buy-37{
     background: #838383;
-    
+
 }
 
 
 .buy-38{
     background: #000000 ;
-    
+
 }
 
 
 .buy-39{
     background: #3681E7 ;
-    
+
 }
 
 .buy-40{
     background: #838383;
-    
+
 }
 
 
 .buy-41{
     background: #AB3432 ;
-    
+
 }
 
 
 .buy-42{
     background: #FFFFFF;
-    
+
 }
 
 
 .buy-43{
     background: #3570A7 ;
-    
+
 }
 
 
 .buy-44{
     background: #870000 ;
-    
+
 }
 
 .buy-45{
     background: #719252 ;
-    
+
 }
 
 
 .buy-46{
     background: #ABB4A3   ;
-    
+
 }
 
 
 .buy-47{
     background: #16DEBC  ;
-    
+
 }
 
 
 .buy-48{
     background: #709191  ;
-    
+
 }
 
 
 .buy-49{
     background: #626061;
-    
+
 }
 
 
 .buy-50{
     background: #0866D8 ;
-    
+
 }
 
 .buy-51{
     background: #000000 ;
-    
+
 }
 
 .buy-52{
     background: #EB1010;
-    
+
 }
 
 .buy-53{
     background: #626061 ;
-    
+
 }
 
 .buy-54{
     background: #E891AD ;
-    
+
 }
 
 .buy-55{
     background: #B97C28 ;
-    
+
 }
 
 .buy-56{
     background: #000000 ;
-    
+
 }
 
 .buy-57{
     background: #799568 ;
-    
+
 }
 
 
 .buy-58{
     background: #E891AD ;
-    
+
 }
 
 
 .buy-59{
     background: #000000 ;
-    
+
 }
 
 
 .buy-60{
     background: #FA435C  ;
-    
+
 }
 
 
@@ -492,7 +511,7 @@ h1 {
 
 mark.crimson {
     color: crimson;
-    background-color: rgba(0, 0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0);
 }
 
 li a {

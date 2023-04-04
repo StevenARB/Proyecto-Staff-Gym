@@ -14,7 +14,22 @@ body{
     justify-content: center;
     align-items: center;
     background: #FFFFFF;
-    
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    color: crimson !important;
 }
 
 .container{
@@ -22,7 +37,7 @@ body{
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0,0,0, .212);
-    
+
 }
 
 .form-image{
@@ -32,11 +47,11 @@ body{
     align-items: center;
     background-color: #709191;
     padding: 1rem;
-        
+
 }
 
 .form-image img{
-width: 31rem;
+    width: 31rem;
 }
 
 .form{
@@ -66,7 +81,7 @@ width: 31rem;
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
-    
+
 }
 
 .login-button button:hover {
@@ -102,7 +117,7 @@ width: 31rem;
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
-    
+
 }
 
 .input-box input{
@@ -111,18 +126,18 @@ width: 31rem;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #000000 ;
-    
-    
+
+
 }
 
 .input-box input:hover{
     background-color: #709191;
-    
+
 }
 
 .input-box input:focus-visisble{
     outline: 1px solid #000000 ;
-    
+
 }
 
 .input-box label,
@@ -131,13 +146,13 @@ width: 31rem;
     font-weight: 600;
     color: #000000 ;
 }
-    
+
 
 
 
 .input-box input::placeholder{
     color: #870000 ;
-    
+
 }
 
 .gender-group{
@@ -199,26 +214,26 @@ width: 31rem;
     .container{
         width: 90%;
     }
-        
-        .input-group{
-            flex-direction: column;
-            overflow-y: scroll;
-            flex-wrap: nowrap;
-            max-height: 10rem;
-            padding-right: 5rem;
-        }
-        
-        .gender-input{
-            margin-top: 2rem;
-        }
-       
-        .gender-group{
-            flex-direction: column;
-        }
-        
-        .gender-input{
-            margin-top: 0.5rem; 
-        }
+
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+
+    .gender-input{
+        margin-top: 2rem;
+    }
+
+    .gender-group{
+        flex-direction: column;
+    }
+
+    .gender-input{
+        margin-top: 0.5rem;
+    }
 }
 
 body {
@@ -247,7 +262,7 @@ h1 {
 
 mark.crimson {
     color: crimson;
-    background-color: rgba(0, 0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0);
 }
 
 li a {
