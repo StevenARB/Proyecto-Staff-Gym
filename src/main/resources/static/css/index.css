@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Righteous&display=swap');
+
 body {
     background: url("../images/fondoIndex.png");
     background-size: cover;
@@ -45,9 +46,4 @@ h1 {
 mark.crimson {
     color: crimson;
     background-color: rgba(0, 0, 0, 0);
-}
-
-.content-text {
-    color: white;
-    margin-top: 1000px;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Righteous&display=swap');
 
 body {
     background: url("../images/fondoConfirmar.jpg");
@@ -11,31 +11,34 @@ body {
 
 nav {
     background-color: rgba(1, 1, 1, 0.5);
-    padding: 1em;
-}
-
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 5vmax;
-    text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    color: #EB1010;
-    margin-top: 5vh;
-}
-
-mark.crimson {
-    color: crimson;
-    background-color: rgba(0, 0, 0, 0); 
 }
 
 li a {
     font-family: 'Open Sans', sans-serif;
-    color: #fff !important;
+    font-weight: 600;
+    color: white !important;
 }
 
-.content-text {
+li a:hover:not(.active) {
+    color: crimson !important;
+}
+
+.brand-font {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
     color: white;
-    margin-top: 1000px;
+    margin-top: 30vh;
 }
 
+.h1-center {
+    top: 50%;
+    left: 50%;
+}
