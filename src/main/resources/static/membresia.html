@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Staff Gym</title>
+        <title>Staff Gym - Membresías</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
@@ -11,86 +11,75 @@
     <body>
         <div>
             <header>
-                <nav class="bg-dark">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pag 1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pag 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pag 3</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pag 4</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pag 5</a>
-                        </li>
-                    </ul>
+                <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+                    <div class="container">
+                        <a class="navbar-brand brand-font" href="#">Staff<span class="text-danger"> Gym</span></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-ite  m">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="nosotros.html">Acerca</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="productos.html">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="reserva.html">Reservar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Membresías</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="login.html">Log In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="foro.html">Foro</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
             </header>
         </div>
-
         <div class="container">
-
-            
             <div style="text-align: center;"> </div>  
             <h1>Membresías</h1>
             <hr>
-            
-           <p class ="p">Obtén los mejores beneficios con nosotros</p> 
-
-
-
-           
+            <p class ="p">Obtén los mejores beneficios con nosotros</p> 
             <div class="anualidad">
-              
-                         <h2>ANUALIDAD</h2>       
-              
+                <h2>ANUALIDAD</h2>       
                 <div class="espacio1_3">   
                     <p>Obtén los mejores beneficios con nosotros</p>
-                      <p>En curso</p>
-                     <p>Ilimitado</p>
+                    <p>En curso</p>
+                    <p>Ilimitado</p>
                     <p>Costo: 1234</p>             
                     <input class="btn btn-primary" type="reset" value="Adquirir" onclick="window.location.href = 'https://www.google.com';">
                 </div>
-
-
             </div>
-
             <div class="semestre">
-              
-                         <h2>SEMESTRAL</h2>       
-              
+                <h2>SEMESTRAL</h2>       
                 <div class="espacio1_2">   
                     <p>Obtén los mejores beneficios con nosotros</p>
-                      <p>En curso</p>
-                     <p>Ilimitado</p>
+                    <p>En curso</p>
+                    <p>Ilimitado</p>
                     <p>Costo: 1234</p>
-                 
                     <input class="btn btn-primary" type="reset" value="Adquirir" onclick="window.location.href = 'https://www.google.com';">
                 </div>
-
             </div>
-
             <div class="mensualidad">
-
                 <h2>MENSUALIDAD</h2>            
-
-               <div class="espacio1_1">   
+                <div class="espacio1_1">   
                     <p>Obtén los mejores beneficios con nosotros</p>
                     <p>En curso</p>
-                     <p>Ilimitado</p>
+                    <p>Ilimitado</p>
                     <p>Costo: 1234</p>
-                 
                     <input class="btn btn-primary" type="reset" value="Adquirir" onclick="window.location.href = 'https://www.google.com';">
                 </div>
-
             </div>
         </div>
     </body>
