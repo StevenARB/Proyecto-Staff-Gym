@@ -1,96 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Righteous&display=swap');
+
 body{
-  background: f1fbff;
+    background: #f1fbff;
 }
+
+nav {
+    background-color: rgba(1, 1, 1, 0.5);
+}
+
+li a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: white !important;
+}
+
+li a:hover:not(.active) {
+    color: crimson !important;
+}
+
+.brand-font {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+}
+
 .section-padding{
-  padding:100px 0;
+    padding:100px 0;
 }
 .carousel-item{
-  height:100vh;
-  min-height: 300px;
+    height:100vh;
+    min-height: 300px;
 }
 .carousel-caption{
-  bottom:220px;
-  z-index:2;
+    bottom:220px;
+    z-index:2;
 }
 .carousel-caption h5{
-font-size:45px;
-text-transform:uppercase;
-letter-spacing: 2px;
-margin-top:25px;
+    font-size:45px;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    margin-top:25px;
 }
-.carousel-caption p{
-width: 60%;
-margin:auto;
-font-size:  100px;
-line-height: 1.9;
+
+.carousel-margin-bot {
+    margin-bottom: 10vh;
 }
 .carousel-inner::before{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0, 7);
-  z-index: 1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0, 7);
+    z-index: 1;
 }
-.navbar-nav a{
-  font-size: 15px;
-  text-transform: uppercase ;
-  font-weight:500;
-}
-.navbar-light .navbar-brand{
-  color:#000;
-  font-size:25px;
-  text-transform:uppercase;
-  font-weight:700;
-  letter-spacing: 2px;
-}
-.navbar-light .navbar-brand:focus,
-.navbar-light .navbar-brand:hover{
-  color:#000
-}
-.navbar-light .navbar-nav .navbar-link{
-  color:#000;
-}
+
 .w-100{
-  height: 100vh;
+    height: 100vh;
 
 } /*Aqui podemos visualizar que la pagina comienza a ser responsive*/
 
 .service .card-body i{
-  font-size: 50px;
+    font-size: 50px;
 }
 
 
 
 @media only screen and(min-width: 768px) and (max-width: 991px){
-  .carousel-caption{
-    bottom: 365px;
-  }
-  .carousel-caption p{
-    width: 100%;
-}
+    .carousel-caption{
+        bottom: 365px;
+    }
+    .carousel-caption p{
+        width: 100%;
+    }
 
 
-@media only screen and (max-width:767px){
-  .navbar-nav{
-    text-align: center;
-  }
-  .carousel-caption{
-    bottom:125px;
-  }
-  .carousel-caption h5{
-    padding:10px 15px;
-    font-size: 17px;
-  }
-  .carousel-caption a{
-    padding:10px 15px;
-  }
-  .carousel-caption p{
-    width: 100px;
-    line-height: 1.6;
-    font-size: 12px;
-  }
-}
+    @media only screen and (max-width:767px){
+        .navbar-nav{
+            text-align: center;
+        }
+        .carousel-caption{
+            bottom:125px;
+        }
+        .carousel-caption h5{
+            padding:10px 15px;
+            font-size: 17px;
+        }
+        .carousel-caption a{
+            padding:10px 15px;
+        }
+        .carousel-caption p{
+            width: 100px;
+            line-height: 1.6;
+            font-size: 12px;
+        }
+    }
 }
