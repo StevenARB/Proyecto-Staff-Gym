@@ -58,6 +58,12 @@ line-height: 1.9;
 
 } /*Aqui podemos visualizar que la pagina comienza a ser responsive*/
 
+.service .card-body i{
+  font-size: 50px;
+}
+
+
+
 @media only screen and(min-width: 768px) and (max-width: 991px){
   .carousel-caption{
     bottom: 365px;
