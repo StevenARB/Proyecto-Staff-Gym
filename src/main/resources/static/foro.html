@@ -51,38 +51,36 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <form method="post">
                 
                 <div class="title_field">
-                    <input type="text" placeholder="Titulo" required>
+                    <input type="text" placeholder="Titulo" size="51" required>
                 </div>
                 
                 <div class="name_field">
-                    <input type="text" placeholder="Nombre" required> 
+                    <input type="text" placeholder="Nombre" size="51" required> 
                 </div>
                 
                 <div class="form-floating">
                     <br>
-                    <textarea class="form-control" placeholder="Digite su opinion aqui" 
-                              id="floatingTextarea2" style="height: 100px" required></textarea>
-                              
-
-                    <button type="submit">Crear foro</button>
-                    
+                    <textarea class="form-control" placeholder="Leave a comment here" 
+                              id="floatingTextarea" rows="15" cols="50" required></textarea>
                 </div>
+                <button class="crear" type="submit">Crear foro</button>
             </form>
         </div>
         
         <div class="response">
-            <h4>Respuestas</h4>
+            <h4 class="heading_respuesta">Respuestas</h4>
             <!--<button onclick="showResponse()">Responder</button>-->
             <form method="post">
                 <div class="name_field">
-                    <input type="text" placeholder="nombre" required>
+                    <input type="text" placeholder="Nombre" size="45" required>
                 </div>
                 <div class="comment">
+                    <br>
                     <textarea class="form-control" placeholder="Digite su respuesta aqui" 
-                              id="floatingTextarea2" style="height: 100px" required></textarea>
-
-                    <button type="submit" formmethod="post">Subir respuesta</button>
+                              id="floatingTextarea2" rows="15" cols="45" required></textarea>
                 </div>
+                <button class="responder" type="submit" formmethod="post">Subir respuesta</button>
+                <br> <br> <br>
             </form>
             
         </div>
