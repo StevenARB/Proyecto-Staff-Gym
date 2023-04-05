@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Righteous&display=swap');
 
-body{
-    background: #f1fbff;
-}
+
 
 nav {
     background-color: rgba(1, 1, 1, 0.5);
@@ -23,6 +21,12 @@ li a:hover:not(.active) {
     font-weight: 400;
 }
 
+.image-opacity{
+    
+    opacity: 0.5;
+    
+    
+}
 .section-padding{
     padding:100px 0;
 }
@@ -65,6 +69,11 @@ li a:hover:not(.active) {
 }
 
 
+.color{
+    
+    background-color: black;
+    
+}
 
 @media only screen and(min-width: 768px) and (max-width: 991px){
     .carousel-caption{
