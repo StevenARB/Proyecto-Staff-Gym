@@ -11,7 +11,7 @@ CREATE TABLE `usuarios` (
   `telefono` varchar(9) NOT NULL,
   `fecha` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ;
+);
 
 INSERT INTO `usuarios` VALUES (1,'Luis','Guerrero','Mora','1-9880-7590','luisgm98@gmail.com','8989-9090', '10/03/2023');
 INSERT INTO `usuarios` VALUES (2,'Bryan','Mora','Quesada','1-6425-3637','brmoque123@gmail.com','7478-5678', '10/03/2023');
@@ -24,6 +24,14 @@ ALTER TABLE `usuarios`(
   `active` INT NOT NULL,
   );
 
+CREATE TABLE `anuncios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(45) NOT NULL,
+  `fecha` varchar(10) NOT NULL,
+  `mensaje` varchar(500) NOT NULL,
+  `imagen` varchar(1000) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 
 CREATE TABLE `contacto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
