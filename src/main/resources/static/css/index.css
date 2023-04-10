@@ -47,3 +47,19 @@ mark.crimson {
     color: crimson;
     background-color: rgba(0, 0, 0, 0);
 }
+
+.header-size {
+    height: 100vh
+}
+
+.cardsgroup-margin {
+    margin: 5vw 5vw;
+}
+
+.card-background-color {
+    background: #161616;
+}
+
+.card-text-color{
+    color: white;
+}

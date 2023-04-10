@@ -10,7 +10,7 @@
     </head>
     <body>
         <div>
-            <header>
+            <header class="header-size">
                 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
                     <div class="container">
                         <a class="navbar-brand brand-font" href="#">Staff<span class="text-danger"> Gym</span></a>
@@ -44,10 +44,24 @@
                         </div>
                     </div>
                 </nav>
-                    <h1>Staff<mark class="crimson">Gym</mark></h1>
+                <h1>Staff<mark class="crimson">Gym</mark></h1>
+                <div style="text-align: center">
+                    <a type="button" href="#scroll-target" class="btn btn-outline-danger btn-lg" style="justify-content: center; margin-top: 15vh;">Conoce más</a>
+                    <a type="button" href="membresia.html" class="btn btn-light btn-lg" style="justify-content: center; margin-top: 15vh;">¡Empieza ya!</a>
+                </div>
             </header>
-            <div style="text-align: center">
-                <button type="button" class="btn btn-outline-light btn-lg" style="justify-content: center; margin-top: 15vh;">¡Empieza ya!</button>
+            <div class="row row-cols-1 row-cols-md-3 g-4 cardsgroup-margin">
+                <th:block th:each="anuncio : ${anuncios}">
+                    <div class="col">
+                        <div id="scroll-target" class="card h-100 card-background-color">
+                            <img th:src="@{${anuncio.getImagen}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title card-text-color" th:text="${anuncio.getTitulo}"></h5>
+                                <p class="card-text card-text-color" th:text="${anuncio.getMensaje}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </th:block>
             </div>
         </div>
     </body>

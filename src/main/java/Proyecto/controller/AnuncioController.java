@@ -31,6 +31,13 @@ public class AnuncioController {
         model.addAttribute("anuncios", listaAnuncio);
         return "anuncio";
     }
+    
+    @GetMapping("/")
+    public String home(Model model) {
+        List<Anuncio> listaAnuncio = anuncioService.getAllAnuncio();
+        model.addAttribute("anuncios", listaAnuncio);
+        return "index";
+    }
 
     @RequestMapping("/anuncioTitulo")
     public String buscarTitulo(Model model, @Param("titulo") String titulo) {
