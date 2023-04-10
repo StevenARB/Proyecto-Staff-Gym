@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface IProductoService {
     
-     public List<Producto> getAllProducto();
+    public List<Producto> getAllProducto();
 
     public Producto getProductoById(long id);
 
@@ -22,7 +22,5 @@ public interface IProductoService {
     public void delete(long id);
 
     public List<Producto> getProductoByPrecio(int precio);
-
-    public Producto findBynombre_producto(String username);
     
 }

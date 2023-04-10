@@ -21,11 +21,22 @@ li a:hover:not(.active) {
     font-weight: 400;
 }
 
+.slides-titles-font {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.slides-text-font {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.button-text-color {
+    color: black;
+}
+
 .image-opacity{
-    
-    opacity: 0.5;
-    
-    
+    opacity: 0.5;  
 }
 .section-padding{
     padding:100px 0;
