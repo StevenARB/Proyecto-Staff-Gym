@@ -17,5 +17,5 @@ public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
     @Query(value = "SELECT * FROM usuarios WHERE usuarios.cedula LIKE %:filtro%", nativeQuery = true)
     List<Usuario> findByCedula(@Param("filtro") String filtro);
 
-    public Usuario findByNombre(String username);
+    Usuario findByNombre(String username);
 }
