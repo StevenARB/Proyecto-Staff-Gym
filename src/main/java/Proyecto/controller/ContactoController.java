@@ -5,7 +5,6 @@
 package Proyecto.controller;
 
 import Proyecto.entity.Contacto;
-import Proyecto.entity.Usuario;
 import Proyecto.service.IContactoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

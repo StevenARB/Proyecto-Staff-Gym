@@ -10,6 +10,7 @@
     </head>
     <body>
         <div>
+            <!-- comment 
             <header class="header-size">
                 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
                     <div class="container">
@@ -49,6 +50,14 @@
                     <a type="button" href="#scroll-target" class="btn btn-outline-danger btn-lg" style="justify-content: center; margin-top: 15vh;">Conoce más</a>
                     <a type="button" href="membresia.html" class="btn btn-light btn-lg" style="justify-content: center; margin-top: 15vh;">¡Empieza ya!</a>
                 </div>
+            </header>-->
+            <header th:fragment="header" class="header-size">
+                <nav th:replace="plantilla/template::navbar"></nav>
+                <h1>Staff<mark class="crimson">Gym</mark></h1>
+                <div style="text-align: center">
+                    <a th:text="#{index.leerMas}" type="button" href="#scroll-target" class="btn btn-outline-danger btn-lg" style="justify-content: center; margin-top: 15vh;"></a>
+                    <a th:text="#{index.empiezaYa}" type="button" href="membresia" class="btn btn-light btn-lg" style="justify-content: center; margin-top: 15vh;"></a>
+                </div>
             </header>
             <div class="row row-cols-1 row-cols-md-3 g-4 cardsgroup-margin">
                 <th:block th:each="anuncio : ${anuncios}">
@@ -65,5 +74,4 @@
             </div>
         </div>
     </body>
-    <footer th:replace="plantilla/template::footer"></footer>
 </html>
