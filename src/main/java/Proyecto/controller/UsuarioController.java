@@ -31,9 +31,9 @@ public class UsuarioController {
         return "usuario";
     }
 
-    @RequestMapping("/usuarioCedula")
-    public String buscarCedula(Model model, @Param("cedula") String cedula) {
-        List<Usuario> listaUsuario = usuarioService.getUsuarioByCedula(cedula);
+    @RequestMapping("/usuarioEmail")
+    public String buscarEmail(Model model, @Param("email") String email) {
+        List<Usuario> listaUsuario = usuarioService.getUsuarioByEmail(email);
         model.addAttribute("titulo", "Usuarios");
         model.addAttribute("usuarios", listaUsuario);
         return "usuario";

@@ -22,8 +22,8 @@ public class UsuarioService implements IUsuarioService {
     }
 
     @Override
-    public List<Usuario> getUsuarioByCedula(String cedula) {
-        return (List<Usuario>) usuarioRepository.findByCedula(cedula);
+    public List<Usuario> getUsuarioByEmail(String email) {
+        return (List<Usuario>) usuarioRepository.findByEmail(email);
     }
 
     @Override

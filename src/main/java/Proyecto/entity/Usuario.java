@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -22,9 +24,13 @@ public class Usuario implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String nombre, apellido1, apellido2, cedula, email, telefono, fecha;
-    private String password, roles=" ", permissions=" ";
+    private String nombre, email, fecha;
+    private String password, roles=" ", permissions="";
     private int active;
+
+    @ManyToOne
+    @JoinColumn(name = "clientes_id")
+    private Cliente cliente;
 
     public long getId() {
         return id;
@@ -42,44 +48,12 @@ public class Usuario implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getApellido1() {
-        return apellido1;
-    }
-
-    public void setApellido1(String apellido1) {
-        this.apellido1 = apellido1;
-    }
-
-    public String getApellido2() {
-        return apellido2;
-    }
-
-    public void setApellido2(String apellido2) {
-        this.apellido2 = apellido2;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 
     public String getFecha() {
@@ -119,6 +93,9 @@ public class Usuario implements Serializable {
     public void setActive(int active) {
         this.active = active;
     }
-    
+
+    public Cliente getCliente() {
+        return cliente;
+    }
 
 }

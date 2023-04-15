@@ -1,6 +1,6 @@
 package Proyecto.repository;
 
-import Proyecto.entity.Usuario;
+import Proyecto.entity.Cliente;
 import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -12,10 +12,8 @@ import org.springframework.stereotype.Repository;
  * @author Steven
  */
 @Repository
-public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
+public interface ClienteRepository extends CrudRepository<Cliente, Long> {
 
-    @Query(value = "SELECT * FROM usuarios WHERE usuarios.email LIKE %:filtro%", nativeQuery = true)
-    List<Usuario> findByEmail(@Param("filtro") String filtro);
-
-    Usuario findByNombre(String username);
+    @Query(value = "SELECT * FROM clientes WHERE clientes.cedula LIKE %:filtro%", nativeQuery = true)
+    List<Cliente> findByCedula(@Param("filtro") String filtro);
 }
