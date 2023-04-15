@@ -1,6 +1,23 @@
 CREATE DATABASE staffgym;
 use staffgym;
 
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `apellido1` varchar(45) NOT NULL,
+  `apellido2` varchar(45) NOT NULL,
+  `cedula` varchar(11) NOT NULL,
+  `email` varchar(75) NOT NULL,
+  `telefono` varchar(9) NOT NULL,
+  `fecha` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO `clientes` VALUES (1,'Luis','Guerrero','Mora','1-9880-7590','luisgm98@gmail.com','8989-9090', '10/03/2023');
+INSERT INTO `clientes` VALUES (2,'Bryan','Mora','Quesada','1-6425-3637','brmoque123@gmail.com','7478-5678', '10/03/2023');
+INSERT INTO `clientes` VALUES (3,'María','Flores','Miranda','1-8612-8852','marflomi32@gmail.com','2565-0925', '10/03/2023');
+
+
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
@@ -20,23 +37,6 @@ INSERT INTO `usuarios` VALUES (2,'Bryan', 'brmoque123@gmail.com', '$2a$12$r5B.uv
 INSERT INTO `usuarios` VALUES (3,'María','marflomi32@gmail.com', '$2a$12$5d99ilZwUsDxKcLzaNBbLuN11PG/PdaJLhqHOD6HgxeaMo5FfY9wS','ADMIN','ADMIN', '10/03/2023', 1, null);
 
 
-CREATE TABLE `clientes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) NOT NULL,
-  `apellido1` varchar(45) NOT NULL,
-  `apellido2` varchar(45) NOT NULL,
-  `cedula` varchar(11) NOT NULL,
-  `email` varchar(75) NOT NULL,
-  `telefono` varchar(9) NOT NULL,
-  `fecha` varchar(10) NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
-INSERT INTO `clientes` VALUES (1,'Luis','Guerrero','Mora','1-9880-7590','luisgm98@gmail.com','8989-9090', '10/03/2023');
-INSERT INTO `clientes` VALUES (2,'Bryan','Mora','Quesada','1-6425-3637','brmoque123@gmail.com','7478-5678', '10/03/2023');
-INSERT INTO `clientes` VALUES (3,'María','Flores','Miranda','1-8612-8852','marflomi32@gmail.com','2565-0925', '10/03/2023');
-
-
 CREATE TABLE `anuncios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(45) NOT NULL,
@@ -45,6 +45,9 @@ CREATE TABLE `anuncios` (
   `imagen` varchar(1000) NOT NULL,
   PRIMARY KEY (`id`)
 );
+
+INSERT INTO `anuncios` VALUES (1, '¡Aún tienes Tiempo!', '10/03/2023', 'Disfruta de nuestras nuevas Membresías y se parte de Staff Gym', 'https://images.unsplash.com/photo-1629339837617-7069ce9e7f6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80');
+INSERT INTO `anuncios` VALUES (2, 'Conoce nuestras Instalaciones', '10/03/2023', 'No tienes que Pagar nada, ven a conocer nuestras Instalaciones', 'https://images.unsplash.com/photo-1603665409265-bdc00027c217?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60');
 
 
 CREATE TABLE `contacto` (
