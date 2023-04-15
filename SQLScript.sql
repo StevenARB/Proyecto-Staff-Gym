@@ -64,6 +64,14 @@ INSERT INTO `reservacion` VALUES (1,'Luis','Guerrero','Mora','1-9880-7590','luis
 INSERT INTO `reservacion` VALUES (2,'Saul','Mora','Quesada','3-0309-780','aaron1@gmail.com','7478-5678', '14/03/2023');
 INSERT INTO `reservacion` VALUES (3,'Marlene','Molina','Rodriguez','3-0306-815','marmolina@gmail.com','8698-5728', '02/03/2023');
 
+CREATE TABLE `foro` (
+`id` int(20) NOT NULL AUTO_INCREMENT,
+`autor` varchar(50) NOT NULL,
+`titulo` varchar(100) NOT NULL,
+`mensaje` varchar (500) NOT NULL,
+PRIMARY KEY (`id`)
+);
+
  CREATE TABLE `productos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_producto` varchar(45) NOT NULL,
