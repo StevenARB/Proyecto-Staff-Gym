@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 body{
@@ -57,7 +58,7 @@ h1{
 
     color: black;
     display: flex;
-    justify-content: flex-start; /* alineacion horizontal --*/
+    justify-content: center; /* alineacion horizontal --*/
     align-items: center; /* alineacion vertical |*/
     width: 600px;
     margin: 0 auto; /*para centrar un elemento con anchura fija horizontalmente*/
@@ -107,3 +108,17 @@ a.btn-danger {
   margin-top: 0;
 }
 
+.form-select {
+  width: 98%;
+}
+
+
+#mensaje {
+  width: 120%;
+   margin-bottom: 0;
+}
+
+
+label[for="entrenadores"] + select {
+  margin-top: 0.25rem;
+}
