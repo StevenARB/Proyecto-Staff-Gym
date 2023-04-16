@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Staff Gym</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="css/adquirirMembresia.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="/action_page.php">
+
+                        <div class="row">
+                            <div class="col-50">
+                                <h3  th:text="#{cancelar.datos}"></h3> 
+                                <label th:text="#{cancelar.nombre}" for="fname"><i class="fa fa-user"></i> </label>
+                                <input type="text" id="fname" name="firstname" th:placeholder="#{cancelar.nombre}">
+                                
+                                <label  th:text="#{cancelar.apellidos}" for="fname"><i class="fa fa-user"></i> </label>
+                                <input type="text" id="fname" name="firstname" th:placeholder="#{cancelar.apellidos}">
+                                
+                                <label  th:text="#{cancelar.cedula}" for="adr"><i class="fa fa-address-card-o"></i> </label>
+                                <input type="text" id="adr" name="address" th:placeholder="#{cancelar.cedula}">
+                                
+                                <label  th:text="#{cancelar.telefono}" for="email"><i class="fa fa-envelope"></i></label>
+                                <input type="text" id="adr" name="address" placeholder="8928-7735">
+                                
+                                <label  th:text="#{cancelar.correo}" for="city"><i class="fa fa-institution"></i> </label>
+                                <input type="text" id="email" name="email" placeholder="xxxx@gmail.com">
+
+                            </div>
+
+                            <div class="col-50">
+                                <h3 th:text="#{cancelar.titulo}"></h3>
+
+                                <div class="icon-container">
+                                    <img src="images/visa.jpg" style="width: 50px; display: inline-block;">
+                                    <img src="images/mastercard.png" style="width: 50px; display: inline-block;">
+                                </div>
+
+                                <label  for="cname">Titular</label>
+                                <input type="text" id="cname" name="cardname"  th:placeholder="#{cancelar.nombre}">
+                                
+                                <label th:text="#{cancelar.tarjeta}" for="ccnum"></label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="1145-8976-3490">
+                                
+                                <label th:text="#{cancelar.fecha}" for="expmonth"></label>
+                                <input type="text" id="expmonth" name="expmonth" th:placeholder="#{cancelar.mes}">
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label th:text="#{cancelar.año}" for="expyear"></label>
+                                        <input type="text" id="FechaVencimiento" name="Fecha Vencimiento" placeholder="20XX">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="XXX">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a type="submit" th:text="#{btn.confirmar}" class="btn" href="/"></a>
+                        <a type="submit" th:text="#{btn.cancelar}" class="btn" href="/" style="background: red"></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
