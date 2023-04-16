@@ -10,7 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     </head>
     <body>
-<header>    
+        <header>    
             <nav>
                 <ul>
                     <li>
@@ -48,35 +48,35 @@
                 </ul>
             </nav>
         </header>
-            <div class="contenedor">
-                <h2 th:text="${tituloh2anuncio}"></h2>
-                <hr class="horizontal-line">
-                <form th:action="@{/guardarAnuncio}" th:object=${anuncio} method="POST">
-                    <input type="hidden" th:field="*{id}">
-                    <div class="sub-contenedor">
-                        <div class="mb-3">
-                            <label for="formGroupTitulo" class="form-label form-group-label">Titulo</label>
-                            <input th:field="*{titulo}" type="text" class="form-control form-group-input" id="titulo" placeholder="Digitar el Titulo" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="formGroupFecha" class="form-label form-group-label">Fecha</label>
-                            <input th:field="*{fecha}" type="text" class="form-control form-group-input" id="fecha" placeholder="DD/MM/AAAA" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="formGroupMensaje" class="form-label form-group-label">Mensaje</label>
-                            <textarea th:field="*{mensaje}" type="text" class="form-control " rows="4" id="mensaje" placeholder="Escribir Mensaje" style="width: 30vw"required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="formGroupImagen" class="form-label form-group-label">Imagen</label>
-                            <input th:field="*{imagen}" type="text" class="form-control" id="imagen" placeholder="URL" style="width: 40vh" required>
-                        </div>
-                        <div style="margin-top: 10vh">
-                            <button type="submit" class="btn btn-primary btn-lg" value="Guardar">Guardar</button>
-                            <a type="submit" class="btn btn-danger btn-lg" th:href="@{/anuncio}" style="margin-left: 15vw">Cancelar</a>
-                        </div>
+        <div class="contenedor">
+            <h2 th:text="#{anuncio.tituloCU}"></h2>
+            <hr class="horizontal-line">
+            <form th:action="@{/guardarAnuncio}" th:object=${anuncio} method="POST">
+                <input type="hidden" th:field="*{id}">
+                <div class="sub-contenedor">
+                    <div class="mb-3">
+                        <label th:text="#{anuncio.tituloColumna}" for="formGroupTitulo" class="form-label form-group-label"></label>
+                        <input th:field="*{titulo}" type="text" class="form-control form-group-input" id="titulo" th:placeholder=#{anuncio.tituloColumna} required>
                     </div>
-                </form>
-            </div>
+                    <div class="mb-3">
+                        <label th:text="#{anuncio.fecha}" for="formGroupFecha" class="form-label form-group-label"></label>
+                        <input th:field="*{fecha}" type="text" class="form-control form-group-input" id="fecha" placeholder="DD/MM/AAAA" required>
+                    </div>
+                    <div class="mb-3">
+                        <label th:text="#{anuncio.mensaje}" for="formGroupMensaje" class="form-label form-group-label"></label>
+                        <textarea th:field="*{mensaje}" type="text" class="form-control " rows="4" id="mensaje" style="width: 30vw"required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label th:text="#{anuncio.imagen}" for="formGroupImagen" class="form-label form-group-label"></label>
+                        <input th:field="*{imagen}" type="text" class="form-control" id="imagen" placeholder="URL" style="width: 40vh" required>
+                    </div>
+                    <div style="margin-top: 10vh">
+                        <button th:text="#{anuncio.boton_guardar}" type="submit" class="btn btn-primary btn-lg" value="Guardar"></button>
+                        <a th:text="#{anuncio.boton_cancelar}" type="submit" class="btn btn-danger btn-lg" th:href="@{/anuncio}" style="margin-left: 15vw"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
-        
+

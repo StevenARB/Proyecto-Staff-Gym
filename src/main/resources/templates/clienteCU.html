@@ -49,43 +49,43 @@
             </nav>
         </header>
         <div class="contenedor">
-            <h2 th:text="${titulo}"></h2>
+            <h2 th:text="#{cliente.tituloCU}"></h2>
             <hr class="horizontal-line">
             <form th:action="@{/guardarCliente}" th:object=${cliente} method="POST">
                 <input type="hidden" th:field="*{id}">
                 <div class="sub-contenedor">
                     <div class="mb-3">
-                        <label for="formGroupNombre" class="form-label form-group-label">Nombre</label>
-                        <input th:field="*{nombre}" type="text" class="form-control form-group-input" id="nombre" placeholder="Digitar el Nombre" required>
+                        <label th:text=#{cliente.nombre} for="formGroupNombre" class="form-label form-group-label"></label>
+                        <input th:field="*{nombre}" type="text" class="form-control form-group-input" id="nombre" th:placeholder=#{cliente.digitarNombre} required>
                     </div>
                     <div class="mb-3">
-                        <label for="formGroupApellidos" class="form-label form-group-label">Apellidos</label>
-                        <input th:field="*{apellido1}" type="text" class="form-control form-group-input" id="apellido1" placeholder="Apellido 1" required>
-                        <input th:field="*{apellido2}" type="text" class="form-control form-group-input" id="apellido2" placeholder="Apellido 2" style="margin-left: 1vw" required>
+                        <label th:text=#{cliente.apellidos} for="formGroupApellidos" class="form-label form-group-label"></label>
+                        <input th:field="*{apellido1}" type="text" class="form-control form-group-input" id="apellido1" th:placeholder=#{cliente.apellido1} required>
+                        <input th:field="*{apellido2}" type="text" class="form-control form-group-input" id="apellido2" th:placeholder=#{cliente.apellido2} style="margin-left: 1vw" required>
                     </div>
                     <div style="display: block">
                         <div class="mb-3" style="display: inline-block">
-                            <label for="formGroupCedula" class="form-label form-group-label">Cédula</label>
+                            <label th:text=#{cliente.cedula} for="formGroupCedula" class="form-label form-group-label"></label>
                             <input th:field="*{cedula}" type="text" class="form-control form-group-input" id="cedula" placeholder="X-XXXX-XXXX" required>
                         </div>
                         <div class="mb-3" style="display: inline-block; margin-left: 1vw">
-                            <label for="formGroupEmail" class="form-label form-group-label">Email</label>
+                            <label th:text=#{cliente.email} for="formGroupEmail" class="form-label form-group-label"></label>
                             <input th:field="*{email}" type="text" class="form-control" id="email" placeholder="XXX@XXX.com" style="width: 40vh" required>
                         </div>
                     </div>
                     <div style="display: block">
                         <div class="mb-3" style="display: inline-block">
-                            <label for="formGroupTelefono" class="form-label form-group-label">Teléfono</label>
+                            <label th:text=#{cliente.telefono} for="formGroupTelefono" class="form-label form-group-label"></label>
                             <input th:field="*{telefono}" type="text" class="form-control form-group-input" id="telefono" placeholder="XXXX-XXXX" required>
                         </div>
                         <div class="mb-3" style="display: inline-block; margin-left: 1vw">
-                            <label for="formGroupFecha" class="form-label form-group-label">Fecha</label>
+                            <label th:text=#{cliente.fecha} for="formGroupFecha" class="form-label form-group-label"></label>
                             <input th:field="*{fecha}" type="text" class="form-control form-group-input" id="fecha" placeholder="DD/MM/AAAA" required>
                         </div>
                     </div>
                     <div style="margin-top: 10vh">
-                        <button type="submit" class="btn btn-primary btn-lg" value="Guardar">Guardar</button>
-                        <a type="submit" class="btn btn-danger btn-lg" th:href="@{/cliente}" style="margin-left: 15vw">Cancelar</a>
+                        <button th:text=#{cliente.boton_guardar} type="submit" class="btn btn-primary btn-lg" value="Guardar"></button>
+                        <a th:text=#{cliente.boton_cancelar} type="submit" class="btn btn-danger btn-lg" th:href="@{/cliente}" style="margin-left: 15vw"></a>
                     </div>
                 </div>
             </form>

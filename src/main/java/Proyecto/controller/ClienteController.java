@@ -26,7 +26,6 @@ public class ClienteController {
     @GetMapping("/cliente")
     public String index(Model model) {
         List<Cliente> listaCliente = clienteService.getAllCliente();
-        model.addAttribute("titulo", "Clientes");
         model.addAttribute("clientes", listaCliente);
         return "cliente";
     }
@@ -34,14 +33,12 @@ public class ClienteController {
     @RequestMapping("/clienteCedula")
     public String buscarCedula(Model model, @Param("cedula") String cedula) {
         List<Cliente> listaCliente = clienteService.getClienteByCedula(cedula);
-        model.addAttribute("titulo", "Clientes");
         model.addAttribute("clientes", listaCliente);
         return "cliente";
     }
 
     @GetMapping("/crearCliente")
     public String crearCliente(Model model) {
-        model.addAttribute("titulo", "Nuevo Cliente");
         model.addAttribute("cliente", new Cliente());
         return "clienteCU";
     }
@@ -55,7 +52,6 @@ public class ClienteController {
     @GetMapping("/actualizarCliente/{id}")
     public String actualizarCliente(@PathVariable("id") Long idCliente, Model model) {
         Cliente cliente = clienteService.getClienteById(idCliente);
-        model.addAttribute("titulo", "Actualizar Cliente");
         model.addAttribute("cliente", cliente);
         return "clienteCU";
     }

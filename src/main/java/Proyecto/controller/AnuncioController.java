@@ -26,8 +26,7 @@ public class AnuncioController {
 
     @GetMapping("/anuncio")
     public String index(Model model) {
-        List<Anuncio> listaAnuncio = anuncioService.getAllAnuncio();
-        model.addAttribute("tituloh1anuncio", "Anuncios");
+        List<Anuncio> listaAnuncio = anuncioService.getAllAnuncio();;
         model.addAttribute("anuncios", listaAnuncio);
         return "anuncio";
     }
@@ -42,14 +41,12 @@ public class AnuncioController {
     @RequestMapping("/anuncioTitulo")
     public String buscarTitulo(Model model, @Param("titulo") String titulo) {
         List<Anuncio> listaAnuncio = anuncioService.getAnuncioByTitulo(titulo);
-        model.addAttribute("tituloh1anuncio", "Anuncios");
         model.addAttribute("anuncios", listaAnuncio);
         return "anuncio";
     }
 
     @GetMapping("/crearAnuncio")
     public String crearAnuncio(Model model) {
-        model.addAttribute("tituloh2anuncio", "Nuevo Anuncio");
         model.addAttribute("anuncio", new Anuncio());
         return "anuncioCU";
     }
@@ -63,7 +60,6 @@ public class AnuncioController {
     @GetMapping("/actualizarAnuncio/{id}")
     public String actualizarAnuncio(@PathVariable("id") Long idAnuncio, Model model) {
         Anuncio anuncio = anuncioService.getAnuncioById(idAnuncio);
-        model.addAttribute("tituloh2anuncio", "Actualizar Anuncio");
         model.addAttribute("anuncio", anuncio);
         return "anuncioCU";
     }
