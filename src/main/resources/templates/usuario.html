@@ -13,45 +13,62 @@
         <header>    
             <nav>
                 <ul>
-                    <li><a class="active" href="#">
-                            <i class="bi bi-person-fill" style="color: #cc0033; margin-right: 1vw"></i>
-                            Usuario</a></li>
+                    <li>
+                        <a class="active" href="usuario">
+                            <i class="bi bi-person-fill nav-icon"></i>
+                            <p th:text="#{navadmin.usuario}" class="nav-text"></p>
+                        </a>
+                    </li>
                     <li><a href="cliente">
-                            <i class="bi bi-person-vcard" style="color: #cc0033; margin-right: 1vw"></i>
-                            Cliente</a></li>
+                            <i class="bi bi-person-vcard nav-icon"></i>
+                            <p th:text="#{navadmin.cliente}" class="nav-text"></p>
+                        </a>
+                    </li>
                     <li><a href="anuncio">
-                            <i class="bi bi-badge-ad-fill" style="color: #cc0033; margin-right: 1vw"></i>
-                            Anuncio</a></li>
+                            <i class="bi bi-badge-ad-fill nav-icon"></i>
+                            <p th:text="#{navadmin.anuncio}" class="nav-text"></p>
+                        </a>
+                    </li>
                     <li><a href="contacto">
-                            <i class="bi bi-person-rolodex" style="color: #cc0033; margin-right: 1vw"></i>
-                            Contacto</a></li>
+                            <i class="bi bi-person-rolodex nav-icon"></i>
+                            <p th:text="#{navadmin.contacto}" class="nav-text"></p>
+                        </a>
+                    </li>
                     <li><a href="/">
-                            <i class="bi bi-box-arrow-left" style="color: #cc0033; margin-right: 1vw"></i>
-                            Salir</a></li>
+                            <i class="bi bi-box-arrow-left nav-icon"></i>
+                            <p th:text="#{navadmin.salir}" class="nav-text"></p>
+                        </a>
+                    </li>
+                    <li style="margin-top: 235%">
+                        <a th:text="#{navadmin.es}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                           th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}" style="color: white"></a>
+                        <a th:text="#{navadmin.en}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                           th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}" style="color: white"></a>             
+                    </li>
                 </ul>
             </nav>
         </header>
         <div class="contenedor">
-            <h1 th:text="${titulo}"></h1>
+            <h1 th:text="#{usuario.titulo}"></h1>
             <form th:action="@{/usuarioEmail}" style="display: inline-block">
                 <div class="input-group mb-3" style="width: 20vw">
-                    <input type="text" name="email" class="form-control" placeholder="Ingresar Email" aria-label="Ingresar Email" aria-describedby="button-addon2" th:value="${email}" required>
-                    <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="Buscar"/>
+                    <input type="text" name="email" class="form-control" th:placeholder="#{usuario.buscarEmail}" aria-label="Ingresar Email" aria-describedby="button-addon2" th:value="${email}" required>
+                    <input class="btn btn-outline-secondary" type="submit" id="button-addon2" th:value="#{usuario.boton_buscar}"/>
                     &nbsp;&nbsp;
                 </div>
             </form>
             <a href="/usuario"><i class="bi bi-arrow-clockwise" style="color: #cc0033; margin-right: 1vw"></i></a>
-            <a type="button" class="btn btn-primary float-end" th:href="@{/crearUsuario}">Nuevo</a>
+            <a th:text="#{usuario.boton_nuevo}" type="button" class="btn btn-primary float-end" th:href="@{/crearUsuario}"></a>
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Permisos</th>
-                        <th scope="col">Roles</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col" style="text-align: center">Acciones</th>
+                        <th th:text="#{usuario.nombre}" scope="col"></th>
+                        <th th:text="#{usuario.email}" scope="col"></th>
+                        <th th:text="#{usuario.permisos}" scope="col"></th>
+                        <th th:text="#{usuario.roles}" scope="col"></th>
+                        <th th:text="#{usuario.estado}" scope="col"></th>
+                        <th th:text="#{usuario.fecha}" scope="col"></th>
+                        <th th:text="#{usuario.acciones}" scope="col" style="text-align: center"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,30 +81,34 @@
                         <td th:text="${usuario.getActive}"></td>
                         <td th:text="${usuario.getFecha}"></td>
                         <td style="text-align: center">
-                            <a type="button" class="btn btn-outline-primary btn-sm" id="infoUser" data-bs-toggle="modal" th:attr="data-bs-target='#infoCheckModal'+${usuario.getId}" style="margin-left: 1vw">Detalles</a>
-                            <a type="button" class="btn btn-outline-secondary btn-sm" th:href="@{/actualizarUsuario/{id}(id=${usuario.getId})}">Actualizar</a>                        
-                            <a type="button" class="btn btn-outline-danger btn-sm" id="deleteUser" data-bs-toggle="modal" th:attr="data-bs-target='#deleteCheckModal'+${usuario.getId}" style="margin-left: 1vw">Eliminar</a>
+                            <a th:text="#{usuario.boton_detalles}" type="button" class="btn btn-outline-primary btn-sm" id="infoUser" data-bs-toggle="modal" th:attr="data-bs-target='#infoCheckModal'+${usuario.getId}" style="margin-left: 1vw"></a>
+                            <a th:text="#{usuario.boton_actualizar}" type="button" class="btn btn-outline-secondary btn-sm" th:href="@{/actualizarUsuario/{id}(id=${usuario.getId})}"></a>                        
+                            <a th:text="#{usuario.boton_eliminar}" type="button" class="btn btn-outline-danger btn-sm" id="deleteUser" data-bs-toggle="modal" th:attr="data-bs-target='#deleteCheckModal'+${usuario.getId}" style="margin-left: 1vw"></a>
                             <div class="modal fade" th:attr="id='infoCheckModal'+${usuario.getId}" tabindex="-1" aria-labelledby="infoCheckLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="infoCheckLabel">Información Usuario</h5>
+                                            <h5 th:text="#{usuario.infoUsuario}" class="modal-title" id="infoCheckLabel"></h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body modal-info-align">Cédula:
+                                        <div class="modal-body modal-info-align">
+                                            <p th:text="#{usuario.cedula}" class="modal-info-text"></p>
                                             <strong class="modal-info-text" th:text="${usuario.getCliente?.getCedula}"></strong>
                                         </div>
-                                        <div class="modal-body modal-info-align">Apellido 1:
+                                        <div class="modal-body modal-info-align">
+                                            <p th:text="#{usuario.apellido1}" class="modal-info-text"></p>
                                             <strong class="modal-info-text" th:text="${usuario.getCliente?.getApellido1}"></strong>
                                         </div>
-                                        <div class="modal-body modal-info-align">Apellido 2:
+                                        <div class="modal-body modal-info-align">
+                                            <p th:text="#{usuario.apellido2}" class="modal-info-text"></p>
                                             <strong class="modal-info-text" th:text="${usuario.getCliente?.getApellido2}"></strong>
                                         </div>
-                                        <div class="modal-body modal-info-align">Teléfono:
+                                        <div class="modal-body modal-info-align">
+                                            <p th:text="#{usuario.telefono}" class="modal-info-text"></p>
                                             <strong class="modal-info-text modal-info-align" th:text="${usuario.getCliente?.getTelefono}"></strong>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button th:text="#{usuario.boton_cerrar}" type="button" class="btn btn-secondary" data-bs-dismiss="modal"></button>
                                         </div>
                                     </div>
                                 </div>
@@ -96,15 +117,16 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="deleteCheckLabel">Eliminar Usuario</h5>
+                                            <h5 th:text="#{usuario.eliminarUsuario}" class="modal-title" id="deleteCheckLabel"></h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">¿Está seguro de eliminar este Usuario?
+                                        <div class="modal-body">
+                                            <p th:text="#{usuario.seguroEliminar}"></p>
                                             <strong th:text="${usuario.getEmail}"></strong>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                            <a type="button" class="btn btn-danger" th:href="@{/eliminarUsuario/{id}(id=${usuario.getId})}">Eliminar</a>
+                                            <button th:text="#{usuario.boton_cancelar}" type="button" class="btn btn-secondary" data-bs-dismiss="modal"></button>
+                                            <a th:text="#{usuario.boton_seguroEliminar}" type="button" class="btn btn-danger" th:href="@{/eliminarUsuario/{id}(id=${usuario.getId})}"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -116,5 +138,4 @@
             </table>
         </div>
     </body>
-    <footer th:replace="plantilla/template::footer"></footer>
 </html>

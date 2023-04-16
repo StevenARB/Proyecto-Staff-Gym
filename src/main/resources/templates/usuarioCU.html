@@ -10,72 +10,88 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
+        <header>    
             <nav>
                 <ul>
-                    <li><a class="active" href="#">
-                            <i class="bi bi-person-fill" style="color: #cc0033; margin-right: 1vw"></i>
-                            Usuario</a></li>
+                    <li>
+                        <a class="active" href="usuario">
+                            <i class="bi bi-person-fill nav-icon"></i>
+                            <p th:text="#{navadmin.usuario}" class="nav-text"></p>
+                        </a>
+                    </li>
                     <li><a href="cliente">
-                            <i class="bi bi-person-vcard" style="color: #cc0033; margin-right: 1vw"></i>
-                            Cliente</a></li>
+                            <i class="bi bi-person-vcard nav-icon"></i>
+                            <p th:text="#{navadmin.cliente}" class="nav-text"></p>
+                        </a>
+                    </li>
                     <li><a href="anuncio">
-                            <i class="bi bi-badge-ad-fill" style="color: #cc0033; margin-right: 1vw"></i>
-                            Anuncio</a></li>
+                            <i class="bi bi-badge-ad-fill nav-icon"></i>
+                            <p th:text="#{navadmin.anuncio}" class="nav-text"></p>
+                        </a>
+                    </li>
                     <li><a href="contacto">
-                            <i class="bi bi-person-rolodex" style="color: #cc0033; margin-right: 1vw"></i>
-                            Contacto</a></li>
+                            <i class="bi bi-person-rolodex nav-icon"></i>
+                            <p th:text="#{navadmin.contacto}" class="nav-text"></p>
+                        </a>
+                    </li>
                     <li><a href="/">
-                            <i class="bi bi-box-arrow-left" style="color: #cc0033; margin-right: 1vw"></i>
-                            Salir</a></li>
+                            <i class="bi bi-box-arrow-left nav-icon"></i>
+                            <p th:text="#{navadmin.salir}" class="nav-text"></p>
+                        </a>
+                    </li>
+                    <li style="margin-top: 235%">
+                        <a th:text="#{navadmin.es}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                           th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}" style="color: white"></a>
+                        <a th:text="#{navadmin.en}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                           th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}" style="color: white"></a>             
+                    </li>
                 </ul>
             </nav>
         </header>
         <div class="contenedor">
-            <h2 th:text="${titulo}"></h2>
+            <h2 th:text="#{usuario.tituloCU}"></h2>
             <hr class="horizontal-line">
             <form th:action="@{/guardarUsuario}" th:object=${usuario} method="POST">
                 <input type="hidden" th:field="*{id}">
                 <div class="sub-contenedor">
                     <div class="mb-3">
-                        <label for="formGroupNombre" class="form-label form-group-label">Nombre</label>
-                        <input th:field="*{nombre}" type="text" class="form-control form-group-input" id="nombre" placeholder="Digitar el Nombre" required>
+                        <label th:text="#{usuario.nombre}" for="formGroupNombre" class="form-label form-group-label"></label>
+                        <input th:field="*{nombre}" type="text" class="form-control form-group-input" id="nombre" th:placeholder="#{usuario.digitarNombre}" required>
                     </div>
                     <div style="display: block">
                         <div class="mb-3" style="display: inline-block">
-                            <label for="formGroupEmail" class="form-label form-group-label">Email</label>
+                            <label th:text="#{usuario.email}" for="formGroupEmail" class="form-label form-group-label"></label>
                             <input th:field="*{email}" type="text" class="form-control" id="email" placeholder="XXX@XXX.com" style="width: 40vh" required>
                         </div>
                     </div>
                     <div style="display: block">
                         <div class="mb-3" style="display: inline-block">
-                            <label for="formGroupPassword" class="form-label form-group-label">Contraseña</label>
-                            <input type="text" class="form-control form-group-input" id="password" placeholder="Contraseña" style="width: 40vh" required>
+                            <label th:text="#{usuario.contrasena}" for="formGroupPassword" class="form-label form-group-label"></label>
+                            <input type="text" class="form-control form-group-input" id="password" th:placeholder="#{usuario.contrasena}" style="width: 40vh" required>
                         </div>
                     </div>
                     <div style="display: block">
                         <div class="mb-3" style="display: inline-block">
-                            <label for="formGroupPermissions" class="form-label form-group-label">Permisos</label>
-                            <input type="text" class="form-control form-group-input" id="permissions" placeholder="Permisos" required>
+                            <label th:text="#{usuario.permisos}" for="formGroupPermissions" class="form-label form-group-label"></label>
+                            <input type="text" class="form-control form-group-input" id="permissions" th:placeholder="#{usuario.permisos}" required>
                         </div>
                         <div class="mb-3" style="display: inline-block; margin-left: 1vw">
-                            <label for="formGroupRoles" class="form-label form-group-label">Roles</label>
-                            <input type="text" class="form-control form-group-input" id="roles" placeholder="Roles" required>
+                            <label th:text="#{usuario.roles}" for="formGroupRoles" class="form-label form-group-label"></label>
+                            <input type="text" class="form-control form-group-input" id="roles" th:placeholder="#{usuario.roles}" required>
                         </div>
                     </div>
                     <div style="display: block">
                         <div class="mb-3" style="display: inline-block">
-                            <label for="formGroupFecha" class="form-label form-group-label">Fecha</label>
+                            <label th:text="#{usuario.fecha}" for="formGroupFecha" class="form-label form-group-label"></label>
                             <input th:field="*{fecha}" type="text" class="form-control form-group-input" id="fecha" placeholder="DD/MM/AAAA" required>
                         </div>
                     </div>
                     <div style="margin-top: 10vh">
-                        <button type="submit" class="btn btn-primary btn-lg" value="Guardar">Guardar</button>
-                        <a type="submit" class="btn btn-danger btn-lg" th:href="@{/usuario}" style="margin-left: 15vw">Cancelar</a>
+                        <button th:text="#{usuario.boton_guardar}" type="submit" class="btn btn-primary btn-lg" value="Guardar"></button>
+                        <a th:text="#{usuario.boton_cancelar}" type="submit" class="btn btn-danger btn-lg" th:href="@{/usuario}" style="margin-left: 15vw"></a>
                     </div>
                 </div>
             </form>
         </div>
     </body>
-    <footer th:replace="plantilla/template::footer"></footer>
 </html>

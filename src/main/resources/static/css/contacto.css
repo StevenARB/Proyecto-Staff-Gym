@@ -104,4 +104,13 @@ a.btn-danger {
    margin-left:3vw
 }
 
+.nav-icon {
+    color: #cc0033; 
+    margin-right: 1vw
+}
+
+.nav-text {
+    display: inline-block; 
+    margin-bottom: 0
+}
 

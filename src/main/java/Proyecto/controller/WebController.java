@@ -12,22 +12,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class WebController {
 
     @GetMapping("/nosotros")
-    public String nosotros(Model model) {
+    public String nosotros() {
         return "nosotros";
     }
 
     @GetMapping("/productos")
-    public String productos(Model model) {
+    public String productos() {
         return "productos";
     }
 
     @GetMapping("/foro")
-    public String foro(Model model) {
+    public String foro() {
         return "foro";
     }
 
     @GetMapping("/membresia")
-    public String membresia(Model model) {
+    public String membresia() {
         return "membresia";
     }
 

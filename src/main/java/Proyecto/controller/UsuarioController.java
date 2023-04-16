@@ -26,7 +26,6 @@ public class UsuarioController {
     @GetMapping("/usuario")
     public String index(Model model) {
         List<Usuario> listaUsuario = usuarioService.getAllUsuario();
-        model.addAttribute("titulo", "Usuarios");
         model.addAttribute("usuarios", listaUsuario);
         return "usuario";
     }
@@ -34,14 +33,12 @@ public class UsuarioController {
     @RequestMapping("/usuarioEmail")
     public String buscarEmail(Model model, @Param("email") String email) {
         List<Usuario> listaUsuario = usuarioService.getUsuarioByEmail(email);
-        model.addAttribute("titulo", "Usuarios");
         model.addAttribute("usuarios", listaUsuario);
         return "usuario";
     }
 
     @GetMapping("/crearUsuario")
     public String crearUsuario(Model model) {
-        model.addAttribute("titulo", "Nuevo Usuario");
         model.addAttribute("usuario", new Usuario());
         return "usuarioCU";
     }
@@ -55,7 +52,6 @@ public class UsuarioController {
     @GetMapping("/actualizarUsuario/{id}")
     public String actualizarUsuario(@PathVariable("id") Long idUsuario, Model model) {
         Usuario usuario = usuarioService.getUsuarioById(idUsuario);
-        model.addAttribute("titulo", "Actualizar Usuario");
         model.addAttribute("usuario", usuario);
         return "usuarioCU";
     }
