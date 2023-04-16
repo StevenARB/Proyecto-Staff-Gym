@@ -30,5 +30,10 @@ public class WebController {
     public String membresia() {
         return "membresia";
     }
+    
+     @GetMapping("/cancelar")
+    public String cancelar() {
+        return "cancelar";
+    }
 
 }

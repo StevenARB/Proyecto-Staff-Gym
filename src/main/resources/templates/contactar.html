@@ -29,9 +29,15 @@
                             <p th:text="#{navadmin.anuncio}" class="nav-text"></p>
                         </a>
                     </li>
-                    <li><a class="active" href="contacto">
+                    <li><a  href="contacto">
                             <i class="bi bi-person-rolodex nav-icon"></i>
                             <p th:text="#{navadmin.contacto}" class="nav-text"></p>
+                        </a>
+                    </li>
+                     <li>
+                        <a class="active" href="contactar">
+                            <i class="bi bi-person-badge-fill nav-icon" ></i>
+                            <p th:text="#{navadmin.contactar}" class="nav-text"></p>
                         </a>
                     </li>
                     <li><a href="/">
@@ -58,7 +64,6 @@
                 </div>
             </form>
             <a href="/contactar"><i class="bi bi-arrow-clockwise" style="color: #cc0033; margin-right: 1vw"></i></a>
-            <a th:text="#{contactar.crear}" type="button" class="btn btn-primary float-end" th:href="@{/crearContactar}">Crear</a>
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
@@ -79,19 +84,21 @@
 
                         
                         <td style="text-align: center">
-                            <a th:text="#{contactar.update}" type="button" class="btn btn-outline-secondary btn-sm" th:href="@{/actualizarContactar/{id}(id=${contactar.getId})}">Actualizar</a>
-                            <a th:text="#{contactar.delete}" type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 1vw">Eliminar</a>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <a th:text="#{contactar.delete}" type="button" class="btn btn-outline-danger btn-sm" id="deleteUser" data-bs-toggle="modal" th:attr="data-bs-target='#deleteCheckModal'+${contactar.getId}" style="margin-left: 1vw"></a>
+                            <div class="modal fade" th:attr="id='deleteCheckModal'+${contactar.getId}" tabindex="-1" aria-labelledby="deleteCheckLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Eliminar </h5>
+                                            <h5 th:text="#{contactar.eliminar}" class="modal-title" id="deleteCheckLabel"></h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">¿Está seguro de eliminar?</div>
+                                        <div class="modal-body">
+                                            <p th:text="#{contactar.seguroEliminar}"></p>
+                                            <strong th:text="${contactar.getNombreU}"></strong>
+                                        </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                            <a type="button" class="btn btn-danger" th:href="@{/eliminarContactar/{id}(id=${contactar.getId})}">Eliminar</a>
+                                            <button th:text="#{contactar.cancelar}" type="button" class="btn btn-secondary" data-bs-dismiss="modal"></button>
+                                            <a th:text="#{contactar.eliminar}" type="button" class="btn btn-danger" th:href="@{/eliminarContactar/{id}(id=${contactar.getId})}"></a>
                                         </div>
                                     </div>
                                 </div>

@@ -30,7 +30,6 @@ public class ContactoController {
     @GetMapping("/contacto")
     public String index(Model model) {
         List<Contacto> listaContacto = contactoService.getAllContacto();
-        model.addAttribute("titulo", "Contactos");
         model.addAttribute("contacto", listaContacto);
         return "contacto";
     }
@@ -63,7 +62,6 @@ public class ContactoController {
      @RequestMapping("/ContactoApellidos")
     public String buscarApellidos(Model model, @Param("apellidos") String apellidos) {
         List<Contacto> listaContacto = contactoService.getContactoByApellidos(apellidos);
-        model.addAttribute("titulo", "Contactos");
         model.addAttribute("contacto", listaContacto);
         return "contacto";
     }
