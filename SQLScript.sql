@@ -18,6 +18,33 @@ INSERT INTO `clientes` VALUES (2,'Bryan','Mora','Quesada','1-6425-3637','brmoque
 INSERT INTO `clientes` VALUES (3,'María','Flores','Miranda','1-8612-8852','marflomi32@gmail.com','2565-0925', '10/03/2023');
 
 
+
+CREATE TABLE `entrenadores` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO `entrenadores` VALUES (1,'Marc'),(2,'Isaac'),(3,'Ana');
+
+CREATE TABLE `contactarlos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombreU` varchar(45) NOT NULL,
+  `email` varchar(75) DEFAULT NULL,
+  `mensaje` varchar(500) NOT NULL,
+  `entrenadores_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_contactarlos_entrenadores_idx` (`entrenadores_id`),  
+  CONSTRAINT `fk_contactarlos_entrenadores` FOREIGN KEY (`entrenadores_id`) REFERENCES `entrenadores` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+
+INSERT INTO `contactarlos` (`nombreU`, `email`, `mensaje`, `entrenadores_id`) 
+VALUES ('Juan Mora', 'juan@gmail.com', 'Hola, quisiera solicitar información sobre los servicios ofrecidos', 1),
+       ('Pedro Sanchez', 'pedro@yahoo.com', 'Hola, quisiera agendar una cita con el entrenador Isaac', 2),
+       ('Maria Bermudez', 'maria@hotmail.com', 'Me interesa saber sobre el plan de entrenamiento para principiantes', 3);
+
+
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
