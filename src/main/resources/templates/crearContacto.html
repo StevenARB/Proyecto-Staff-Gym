@@ -54,7 +54,7 @@
 
                 <form th:action="@{/guardarContacto}" th:object=${contacto} method="POST">
 
-                    <h1>Crear Contacto</h1>
+                    <h1 th:text="#{contacto.tituloCU}">Crear Contacto</h1>
                     <hr>
 
                     <input type="hidden" th:field="*{id}">
@@ -62,47 +62,47 @@
                      
                     <div class="row g-3">
                         <div class="col">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="nombre" th:field="*{nombre}">
+                            <label th:text="#{contacto.nombre}"for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" th:placeholder="#{contacto.nombre}" aria-label="Nombre" id="nombre" th:field="*{nombre}">
                         </div>
                         <div class="col">
-                            <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" id="apellidos" th:field="*{apellidos}">
+                            <label th:text="#{contacto.apellidos}" for="apellidos" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" th:placeholder="#{contacto.apellidos}" aria-label="Apellidos" id="apellidos" th:field="*{apellidos}">
                         </div>
 
                     </div>
 
                     <div class="row g-3">
                         <div class="col">
-                            <label for="provincia" class="form-label">Provincia</label>
-                            <input type="text" class="form-control" placeholder="Provincia" aria-label="Provincia" id="provincia" th:field="*{provincia}">
+                            <label th:text="#{contacto.provincia}" for="provincia" class="form-label">Provincia</label>
+                            <input type="text" class="form-control" th:placeholder="#{contacto.provincia}" aria-label="Provincia" id="provincia" th:field="*{provincia}">
                         </div>
                         <div class="col">
-                            <label for="ubicacion" class="form-label">Ubicación</label>
-                            <input type="text" class="form-control" placeholder="Ubicación" aria-label="Ubicación" id="ubicacion" th:field="*{ubicacion}">
+                            <label th:text="#{contacto.ubicacion}" for="ubicacion" class="form-label">Ubicación</label>
+                            <input type="text" class="form-control" th:placeholder="#{contacto.ubicacion}" aria-label="Ubicación" id="ubicacion" th:field="*{ubicacion}">
                         </div>
                     </div>
 
 
                     <div class="row g-3">
                         <div class="col">
-                            <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" id="telefono" th:field="*{telefono}">
+                            <label th:text="#{contacto.telefono}" for="telefono" class="form-label">Teléfono</label>
+                            <input type="text" class="form-control" th:placeholder="#{contacto.telefono}" aria-label="Teléfono" id="telefono" th:field="*{telefono}">
                         </div>
                         <div class="col">
-                            <label for="correo" class="form-label">Correo</label>
+                            <label th:text="#{contacto.correo}" for="correo" class="form-label">Correo</label>
                             <div class="input-group has-validation">
                                 <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                <input type="email" class="form-control" placeholder="Correo" aria-label="Correo" id="correo" th:field="*{email}">
+                                <input type="email" class="form-control" th:placeholder="#{contacto.correo}" aria-label="Correo" id="correo" th:field="*{email}">
                             </div>
                         </div>
                     </div>
 
             </div>
 
-            <div class = "botones" style="margin-top: 10vh">
-                <button type="submit" class="btn btn-primary btn-lg" value="Guardar">Guardar</button>
-                <a type="submit" class="btn btn-danger btn-lg" th:href="@{/contacto}">Cancelar</a>
+            <div class = "botones" style="margin-top: 7vh">
+                <button th:text="#{contacto.save}" type="submit" class="btn btn-primary btn-lg" value="Guardar">Guardar</button>
+                <a th:text="#{contacto.cancelar}" type="submit" class="btn btn-danger btn-lg" th:href="@{/contacto}">Cancelar</a>
             </div>
         </form> 
 
