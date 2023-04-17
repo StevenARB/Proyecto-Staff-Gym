@@ -67,7 +67,7 @@ public class ReservaController {
         return "redirect:/reserva";
     }
 
-    @GetMapping("/actualizareserva/{id}")
+    @GetMapping("/actualizarReserva/{id}")
     public String actualizaReserva(@PathVariable("id") Long idReserva, Model model) {
        Reserva reserva = reservaService.getReservaById(idReserva);
         model.addAttribute("tituloh2", "Actualizar Reserva");
