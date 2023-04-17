@@ -4,12 +4,12 @@
  */
 package Proyecto.entity;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.io.Serializable;
 
 /**
  *
@@ -17,13 +17,14 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "reservacion")
-public class Reserva implements Serializable {
+public class Reserva implements Serializable{
     
      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
-    private String nombre, apellido1, apellido2, cedula, email, telefono, fecha;
+    
+     private long id;
+      
+      private String nombre, apellidos, cedula, email, telefono, fecha;
 
     public void setId(long id) {
         this.id = id;
@@ -33,12 +34,8 @@ public class Reserva implements Serializable {
         this.nombre = nombre;
     }
 
-    public void setApellido1(String apellido1) {
-        this.apellido1 = apellido1;
-    }
-
-    public void setApellido2(String apellido2) {
-        this.apellido2 = apellido2;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
     public void setCedula(String cedula) {
@@ -65,12 +62,8 @@ public class Reserva implements Serializable {
         return nombre;
     }
 
-    public String getApellido1() {
-        return apellido1;
-    }
-
-    public String getApellido2() {
-        return apellido2;
+    public String getApellidos() {
+        return apellidos;
     }
 
     public String getCedula() {
@@ -88,6 +81,5 @@ public class Reserva implements Serializable {
     public String getFecha() {
         return fecha;
     }
-    
-    
+
 }

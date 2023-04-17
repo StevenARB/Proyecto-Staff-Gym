@@ -36,16 +36,11 @@ li a:hover:not(.active) {
     color: white;
 }
 
-h1 {
+h2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    text-align: center;
-    margin-top: 2vh;
     color: #4c4c4c;
-}
-
-strong {
-    display: block;
+    margin-top: 2vh;
 }
 
 .contenedor {
@@ -54,14 +49,25 @@ strong {
     height: 1000px;
 }
 
-.ad-image {
-     height: 100px; 
-     width: 200px; 
-     overflow: hidden;
+.sub-contenedor {
+    margin-left: 0.1vw;
+    margin-top: 2vh;
+    padding: 1px 16px;
 }
 
-.message-size {
-    width: 500px;
-    box-sizing: border-box;
+.form-group-label {
+    display: block;
+}
+
+.form-group-input {
+    display: inline-block; 
+    width: 25vh; 
+}
+
+.horizontal-line {
+    margin: 0;
+    width: 35vw;
+    color: black;
+    padding-bottom: 0.1vh;
 }
 

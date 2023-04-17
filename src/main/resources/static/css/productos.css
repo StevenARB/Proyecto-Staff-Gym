@@ -119,7 +119,7 @@ button{
 
 
 .buy-2{
-    background: #EECD9B ;
+    background: #605233 ;
 
 
 }
@@ -161,7 +161,7 @@ button{
 
 /*defetuoso*/
 .buy-8{
-    background: #FFFFFF;
+    background: #605233;
 
 
 }
@@ -185,7 +185,7 @@ button{
 }
 
 .buy-12{
-    background: #FFFFFF ;
+    background: #605233 ;
 
 }
 
@@ -280,19 +280,19 @@ button{
 
 
 .buy-28{
-    background: #626061;
+    background: #51988A;
 
 }
 
 
 .buy-29{
-    background: #799568 ;
+    background: #870000;
 
 }
 
 
 .buy-30{
-    background: #E891AD;
+    background: #3570A7;
 
 }
 
@@ -310,13 +310,13 @@ button{
 
 
 .buy-33{
-    background: #696B68  ;
+    background: #719252  ;
 
 }
 
 
 .buy-34{
-    background: #E9A1B3 ;
+    background: #3570A7 ;
 
 }
 
@@ -340,132 +340,120 @@ button{
 
 
 .buy-38{
-    background: #000000 ;
+    background: #2EB6AD;
 
 }
 
 
 .buy-39{
-    background: #3681E7 ;
+    background: #709191;
 
 }
 
 .buy-40{
-    background: #838383;
+    background: #05ABEE;
 
 }
 
 
 .buy-41{
-    background: #AB3432 ;
-
+    background: #E9A1B3
 }
 
 
 .buy-42{
-    background: #FFFFFF;
-
-}
-
-
-.buy-43{
-    background: #3570A7 ;
-
-}
-
-
-.buy-44{
-    background: #870000 ;
-
-}
-
-.buy-45{
-    background: #719252 ;
-
-}
-
-
-.buy-46{
-    background: #ABB4A3   ;
-
-}
-
-
-.buy-47{
-    background: #16DEBC  ;
-
-}
-
-
-.buy-48{
-    background: #709191  ;
-
-}
-
-
-.buy-49{
     background: #626061;
 
 }
 
 
-.buy-50{
-    background: #0866D8 ;
-
-}
-
-.buy-51{
-    background: #000000 ;
-
-}
-
-.buy-52{
-    background: #EB1010;
-
-}
-
-.buy-53{
-    background: #626061 ;
-
-}
-
-.buy-54{
-    background: #E891AD ;
-
-}
-
-.buy-55{
-    background: #B97C28 ;
-
-}
-
-.buy-56{
-    background: #000000 ;
-
-}
-
-.buy-57{
+.buy-43{
     background: #799568 ;
 
 }
 
 
-.buy-58{
+.buy-44{
     background: #E891AD ;
 
 }
 
+.buy-45{
+    background: #696B68 ;
 
-.buy-59{
-    background: #000000 ;
+}
+
+
+.buy-46{
+    background: #696B68   ;
 
 }
 
 
-.buy-60{
-    background: #FA435C  ;
+.buy-47{
+    background: #719252 ;
 
 }
+
+
+.buy-48{
+    background: #000000  ;
+
+}
+
+
+.buy-49{
+    background: #3570A7;
+
+}
+
+
+.buy-50{
+    background: #605233 ;
+
+}
+
+.buy-51{
+    background: #28D003   ;
+
+}
+
+.buy-52{
+    background: #799568;
+
+}
+
+.buy-53{
+    background: #05ABEE;
+
+}
+
+.buy-54{
+    background: #B97C28 ;
+
+}
+
+.buy-55{
+    background: #FA435C ;
+
+}
+
+.buy-56{
+    background: #ffc107 ;
+
+}
+
+.buy-57{
+    background: #AB3432 ;
+
+}
+
+
+.buy-58{
+    background: #E9A1B3;
+
+}
+
 
 
 

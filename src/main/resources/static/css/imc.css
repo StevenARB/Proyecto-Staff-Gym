@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+body{
+  display: flex;
+  justify-content: center;
+  background: url("../images/imc.jpg");
+  font-family: 'Open Sans';
+}
+
+.tela{
+  border: 3px #fff;
+  box-shadow: 0px 0px 5px;
+  background-color: #799568;
+  position: absolute;
+  padding: 1em 1em;
+ 
+  width: 310px;
+ 
+  left: 0;
+  right: 0;
+  margin: auto;
+ 
+  top: 50vh;
+  transform : translateY(-50%);
+ 
+  border-radius: 5px;
+}
+
+.bo{
+  font-aling: center;
+  font-size: 18px;
+  width: 100%;
+  padding: 10px;
+  background-color: #AB3432;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transform : translateY(25%);
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #AB3432;
+}
+
+#peso {
+  border: none;
+  width: 70%;
+  font-size: 18px;
+}
+
+#nombre {
+  border: none;
+  width: 70%;
+  font-size: 18px;
+}
+
+#altura {
+  border: none;
+  width: 70%;
+  font-size: 18px;
+}
+
+#resultado {
+  transform : translateY(50%);
+}

@@ -12,12 +12,9 @@ import java.util.List;
  * @author keylo
  */
 public interface IReservaService {
-     public List<Reserva> getAllReserva();
+    public List<Reserva> getAllReserva();
     public List<Reserva> getReservaByCedula(String cedula);
     public Reserva getReservaById (long id);
     public void saveReserva(Reserva reserva);
     public void delete (long id);
-    public Reserva findByNombre (String username);
 }
-
-

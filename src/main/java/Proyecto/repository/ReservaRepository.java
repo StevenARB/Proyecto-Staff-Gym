@@ -9,14 +9,15 @@ import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author keylo
  */
-public interface ReservaRepository extends CrudRepository<Reserva, Long>{
-     @Query(value = "SELECT * FROM reservacion WHERE reservacion.cedula LIKE %:filtro%", nativeQuery = true)
-    List<Reserva> findByCedula(@Param("filtro") String filtro);
+@Repository
 
-    public Reserva findByNombre(String username);
+public interface ReservaRepository extends CrudRepository<Reserva, Long> {
+      @Query(value = "SELECT * FROM reservacion WHERE reservacion.cedula LIKE %:filtro%", nativeQuery = true) ///Buscar por medio de la cedula
+    List<Reserva> findByCedula(@Param("filtro") String filtro);
 }

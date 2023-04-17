@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reserva.css"/>
+        <title>Staff Gym - Reservación</title>
+    </head>
+    <body>
+        <div>
+            <header>
+                <nav class="sticky-top">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-ite  m">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Acerca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reservar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="membresia.html">Membresías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Log In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="foro.html">Foro</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+  
+    <div class="container">
+        <div class="form-image">
+            <img src="images/icon.jpg">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title"><!-- comment -->
+                        <h1>RESERVACION</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="confirmar.html">Reservar</a></button>
+
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="Nombre">Nombre</label>
+                       
+                         <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="nombre" th:field="*{nombre}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Apellido">Apellido</label>
+                       <input type="text" class="form-control" placeholder="Apellido Paterno" aria-label="Apellido Paterno" id="apellidos" th:field="*{apellidoPaterno}">
+                    </div>
+                     <div class="input-box">
+                        <label for="Apellido">Apellido</label>
+                       <input type="text" class="form-control" placeholder="Apellido Materno" aria-label="Apellido Materno" id="apellidos" th:field="*{apellidoMaterno}">
+                    </div>
+                      <div class="input-box">
+                        <label for="Apellido">Cedula</label>
+                       <input type="text" class="form-control" placeholder="Cedula" aria-label="Cedula" id="apellidos" th:field="*{cedula}">
+                    </div>
+                    <div class="input-box">
+                        <label for="Email">Email</label>
+                       
+                          <input type="text" class="form-control" placeholder="Email" aria-label="Email" id="apellidos" th:field="*{email}">
+                    </div>
+                    <div class="input-box">
+                        <label for="telefono">Telefono</label>
+                        <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" id="telefono" th:field="*{telefono}">
+                    </div>
+                    <div class="input-box">
+                        <label for="fecha">Fecha</label>
+                        <!-- <input type="date" name="fecha" placeholder="Ingrese el dia"> --> 
+                         <input type="text" class="form-control" placeholder="Fecha" aria-label="Fecha" id="telefono" th:field="*{fecha}">
+                    </div>
+                    <!--  
+                    <div class="input-box">
+                        <label for="hora">Hora</label> 
+                        <input type="time" name="hora" placeholder="Ingrese la hora">
+                    </div>
+                </div>
+                <div class="gender-group">
+                    <div class="gender-input">
+                        <h6>Genero</h6>
+                    </div>
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="femenino" name="gender">
+                            <label for="femenino">Femenino</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="masculino" name="gender">
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="otro" name="gender">
+                            <label for="otro">Otro</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="Nada" name="gender">
+                            <label for="Nada">Prefiero No decir</label>
+                        </div>
+                       --> 
+                    </div>
+                    
+            </form>
+                    
+                 
+        </div>
+    </div>
+</body>
+</html>

@@ -28,41 +28,51 @@ public class ReservaController {
     @Autowired
     private IReservaService reservaService;
     
-       @GetMapping("/reserva")
+    
+      @GetMapping("/reserva")
     public String index(Model model) {
         List<Reserva> listaReserva = reservaService.getAllReserva();
         model.addAttribute("titulo", "Reservacion");
         model.addAttribute("reservacion", listaReserva);
         return "reserva";
     }
+    
+    /*@GetMapping("/")
+    public String home(Model model) {
+        List<Anuncio> listaAnuncio = anuncioService.getAllAnuncio();
+        model.addAttribute("anuncios", listaAnuncio);
+        return "index";
+    }
 
-    @RequestMapping("/reservaCedula")
+*/
+    @RequestMapping("/reservaBuscar")
     public String buscarCedula(Model model, @Param("cedula") String cedula) {
         List<Reserva> listaReserva = reservaService.getReservaByCedula(cedula);
-        model.addAttribute("titulo", "Reservacion");
+        model.addAttribute("tituloh1", "Reservacion");
         model.addAttribute("reservacion", listaReserva);
         return "reserva";
     }
 
-      @GetMapping("/crearReserva")
+
+    @GetMapping("/crearReserva")
     public String crearReserva(Model model) {
-        model.addAttribute("titulo", "Nueva Reserva");
+        model.addAttribute("tituloh2", "Nueva Reserva");
         model.addAttribute("reserva", new Reserva());
-        return "reserva";
+        return "reservaCU";
     }
 
     @PostMapping("/guardarReserva")
-    public String guardarUsuario(@ModelAttribute Reserva reserva) {
-        reservaService.saveReserva(reserva);
+    public String guardarReserva(@ModelAttribute Reserva reserva) {
+       reservaService.saveReserva(reserva);
         return "redirect:/reserva";
     }
 
-    @GetMapping("/actualizarReserva/{id}")
-    public String actualizarReserva(@PathVariable("id") Long idReserva, Model model) {
-        Reserva reserva = reservaService.getReservaById(idReserva);
-        model.addAttribute("titulo", "Actualizar Reserva");
+    @GetMapping("/actualizareserva/{id}")
+    public String actualizaReserva(@PathVariable("id") Long idReserva, Model model) {
+       Reserva reserva = reservaService.getReservaById(idReserva);
+        model.addAttribute("tituloh2", "Actualizar Reserva");
         model.addAttribute("reserva", reserva);
-        return "reserva";
+        return "reservaCU";
     }
 
     @GetMapping("/eliminarReserva/{id}")
@@ -70,12 +80,6 @@ public class ReservaController {
         reservaService.delete(id);
         return "redirect:/reserva";
     }
-    
-     @RequestMapping("/ReservaA")
-    public String buscarApellidos(Model model, @Param("cedula") String cedula) {
-        List<Reserva> listaReserva = reservaService.getReservaByCedula(cedula);
-        model.addAttribute("titulo", "Reservacion");
-        model.addAttribute("reserva", listaReserva);
-        return "reserva";
-    }
+   
+   
 }

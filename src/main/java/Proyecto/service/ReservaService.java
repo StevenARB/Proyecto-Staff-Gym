@@ -14,25 +14,28 @@ import org.springframework.stereotype.Service;
  *
  * @author keylo
  */
+
 @Service
 public class ReservaService implements IReservaService {
+
     
       @Autowired
     private ReservaRepository reservaRepository;
-
+      
+      
     @Override
     public List<Reserva> getAllReserva() {
-      return (List<Reserva>) reservaRepository.findAll();
+         return (List<Reserva>) reservaRepository.findAll();
     }
 
     @Override
     public List<Reserva> getReservaByCedula(String cedula) {
-         return (List<Reserva>) reservaRepository.findByCedula(cedula);
+       return (List<Reserva>) reservaRepository.findByCedula(cedula);
     }
 
     @Override
     public Reserva getReservaById(long id) {
-        return reservaRepository.findById(id).orElse(null);
+      return reservaRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -43,11 +46,6 @@ public class ReservaService implements IReservaService {
     @Override
     public void delete(long id) {
        reservaRepository.deleteById(id);
-    }
-
-    @Override
-    public Reserva findByNombre(String username) {
-        return reservaRepository.findByNombre(username);
     }
     
     
