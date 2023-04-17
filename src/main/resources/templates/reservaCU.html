@@ -13,19 +13,38 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="usuario">
-                            <i class="bi bi-person-fill" style="color: #cc0033; margin-right: 1vw"></i>
-                            Usuario
-                        </a></li>
-                    <li><a class="active" href="#">
-                            <i class="bi bi-badge-ad-fill" style="color: #cc0033; margin-right: 1vw"></i>
-                            Reserva</a></li>
-                    <li><a href="contacto">
-                            <i class="bi bi-person-rolodex" style="color: #cc0033; margin-right: 1vw"></i>
-                            Contacto</a></li>
+                    <li>
+                        <a class="active" href="usuario">
+                            <i class="bi bi-person-fill nav-icon"></i>
+                            <p th:text="#{navadmin.usuario}" class="nav-text"></p>
+                        </a>
+                    </li>
+                    <li><a href="cliente">
+                            <i class="bi bi-person-vcard nav-icon"></i>
+                            <p th:text="#{navadmin.cliente}" class="nav-text"></p>
+                        </a>
+                    </li>
+                    <li><a href="anuncio">
+                            <i class="bi bi-badge-ad-fill nav-icon"></i>
+                            <p th:text="#{navadmin.anuncio}" class="nav-text"></p>
+                        </a>
+                    </li>
+                       <li><a href="reserva">
+                            <i class="bi bi-calendar-check nav-icon"></i>
+                            <p th:text="#{navadmin.reserva}" class="nav-text"></p>
+                        </a>
+                    </li>
                     <li><a href="/">
-                            <i class="bi bi-box-arrow-left" style="color: #cc0033; margin-right: 1vw"></i>
-                            Salir</a></li>
+                            <i class="bi bi-box-arrow-left nav-icon"></i>
+                            <p th:text="#{navadmin.salir}" class="nav-text"></p>
+                        </a>
+                    </li>                               
+                    <li style="margin-top: 235%">
+                        <a th:text="#{navadmin.es}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                           th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}" style="color: white"></a>
+                        <a th:text="#{navadmin.en}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                           th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}" style="color: white"></a>             
+                    </li>
                 </ul>
             </nav>
             <div class="contenedor">
@@ -35,8 +54,8 @@
                     <input type="hidden" th:field="*{id}">
                     <div class="sub-contenedor">
                         <div class="mb-3">
-                            <label for="formGroupNombre" class="form-label form-group-label">Nombre</label>
-                            <input th:field="*{nombre}" type="text" class="form-control form-group-input" id="nombre" placeholder="Digitar el Nombre" required>
+                            <label th:text="#{reserva.nombre}" for="formGroupNombre" class="form-label form-group-label">Nombre</label>
+                            <input th:field="*{nombre}" type="text" class="form-control form-group-input" id="nombre" th:placeholder="#{reserva.nombremsj}"  required>
                         </div>
                         
                         <div class="mb-3">
