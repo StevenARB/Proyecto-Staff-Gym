@@ -62,7 +62,7 @@
                             <td th:text="${reservar.getTelefono}"></td>
                         <td th:text="${reservar.getFecha}"></td>
                         <td style="text-align: center">
-                            <a type="button" class="btn btn-outline-secondary btn-sm" th:href="@{/actualizarReserva/{id}(id=${reservar.getId})}">Actualizar</a>
+                            <a type="button" class="btn btn-outline-secondary btn-sm" th:href="@{/actualizareserva/{id}(id=${reservar.getId})}">Actualizar</a>
                             <a type="button" class="btn btn-outline-danger btn-sm" id="deleteAd" data-bs-toggle="modal" th:attr="data-bs-target='#deleteCheckModal'+${reservar.getId}" style="margin-left: 1vw">Eliminar</a>
                             <div class="modal fade" th:attr="id='deleteCheckModal'+${reservar.getId}" tabindex="-1" aria-labelledby="deleteCheckLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
@@ -88,5 +88,4 @@
             </table>
         </div>
     </body>
-    <footer th:replace="plantilla/template::footer"></footer>
 </html>
