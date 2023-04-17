@@ -14,7 +14,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a class="active" href="usuario">
+                        <a href="usuario">
                             <i class="bi bi-person-fill nav-icon"></i>
                             <p th:text="#{navadmin.usuario}" class="nav-text"></p>
                         </a>
@@ -29,18 +29,23 @@
                             <p th:text="#{navadmin.anuncio}" class="nav-text"></p>
                         </a>
                     </li>                  
-                     <li><a href="contacto">
+                    <li><a href="contacto">
                             <i class="bi bi-person-rolodex nav-icon"></i>
                             <p th:text="#{navadmin.contacto}" class="nav-text"></p>
                         </a>
                     </li>
-                    <li>
-                        <a class="active" href="contactar">
-                            <i class="bi bi-person-badge-fill nav-icon" ></i>
-                            <p th:text="#{navadmin.contactar}" class="nav-text"></p>
+                    <li><a href="ejercicio">
+                            <i class="bi bi-activity nav-icon"></i>
+                            <p th:text="#{navadmin.ejercicio}" class="nav-text"></p>
                         </a>
                     </li>
-                       <li><a href="reserva">
+                    <li>
+                        <a href="contactar">
+                            <i class="bi bi-person-badge-fill nav-icon" ></i>
+                            <p th:text="#{navadmin.entrenador}" class="nav-text"></p>
+                        </a>
+                    </li>
+                    <li><a class="active" href="reserva">
                             <i class="bi bi-calendar-check nav-icon"></i>
                             <p th:text="#{navadmin.reserva}" class="nav-text"></p>
                         </a>
@@ -50,7 +55,7 @@
                             <p th:text="#{navadmin.salir}" class="nav-text"></p>
                         </a>
                     </li>                               
-                    <li style="margin-top: 235%">
+                    <li style="margin-top: 170%">
                         <a th:text="#{navadmin.es}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                            th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}" style="color: white"></a>
                         <a th:text="#{navadmin.en}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
@@ -68,32 +73,32 @@
                             <label th:text="#{reserva.nombre}" for="formGroupNombre" class="form-label form-group-label">Nombre</label>
                             <input th:field="*{nombre}" type="text" class="form-control form-group-input" id="nombre" th:placeholder="#{reserva.nombremsj}"  required>
                         </div>
-                        
+
                         <div class="mb-3">
                             <label for="formGroupApellidos" class="form-label form-group-label">Apellidos</label>
                             <input th:field="*{apellidos}" type="text" class="form-control form-group-input" id="apellidos" placeholder="Digitar los Apellidos" required>
                         </div>
-                        
-                          <div class="mb-3">
+
+                        <div class="mb-3">
                             <label for="formGroupCedula" class="form-label form-group-label">Cedula</label>
                             <input th:field="*{cedula}" type="text" class="form-control form-group-input" id="cedula" placeholder="Digitar la Cedula" required>
                         </div>
-                        
-                          <div class="mb-3">
+
+                        <div class="mb-3">
                             <label for="formGroupEmail" class="form-label form-group-label">Email</label>
                             <input th:field="*{email}" type="text" class="form-control form-group-input" id="email" placeholder="Digitar el Email" required>
                         </div>
-                        
-                          <div class="mb-3">
+
+                        <div class="mb-3">
                             <label for="formGroupTelefono" class="form-label form-group-label">Telefono</label>
                             <input th:field="*{telefono}" type="text" class="form-control form-group-input" id="telefono" placeholder="Digitar el telefono" required>
                         </div>
-                        
+
                         <div class="mb-3">
                             <label for="formGroupFecha" class="form-label form-group-label">Fecha</label>
                             <input th:field="*{fecha}" type="date" class="form-control form-group-input" id="fecha" placeholder="DD-MM-AAAA" required>
                         </div>
-                       
+
                         <div style="margin-top: 10vh">
                             <button type="submit" class="btn btn-primary btn-lg" value="Guardar">Guardar</button>
                             <a type="submit" class="btn btn-danger btn-lg" th:href="@{/reserva}" style="margin-left: 15vw">Cancelar</a>
@@ -104,4 +109,4 @@
         </header>
     </body>
 </html>
-        
+

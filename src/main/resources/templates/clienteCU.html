@@ -34,13 +34,18 @@
                             <p th:text="#{navadmin.contacto}" class="nav-text"></p>
                         </a>
                     </li>
-                       <li>
-                        <a class="active" href="contactar">
-                            <i class="bi bi-person-badge-fill nav-icon" ></i>
-                            <p th:text="#{navadmin.contactar}" class="nav-text"></p>
+                    <li><a href="ejercicio">
+                            <i class="bi bi-activity nav-icon"></i>
+                            <p th:text="#{navadmin.ejercicio}" class="nav-text"></p>
                         </a>
                     </li>
-                     <li><a href="reserva">
+                    <li>
+                        <a href="contactar">
+                            <i class="bi bi-person-badge-fill nav-icon" ></i>
+                            <p th:text="#{navadmin.entrenador}" class="nav-text"></p>
+                        </a>
+                    </li>
+                    <li><a href="reserva">
                             <i class="bi bi-calendar-check nav-icon"></i>
                             <p th:text="#{navadmin.reserva}" class="nav-text"></p>
                         </a>
@@ -50,7 +55,7 @@
                             <p th:text="#{navadmin.salir}" class="nav-text"></p>
                         </a>
                     </li>
-                    <li style="margin-top: 235%">
+                    <li style="margin-top: 170%">
                         <a th:text="#{navadmin.es}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                            th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}" style="color: white"></a>
                         <a th:text="#{navadmin.en}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"

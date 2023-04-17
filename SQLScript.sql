@@ -77,6 +77,20 @@ INSERT INTO `anuncios` VALUES (1, '¡Aún tienes Tiempo!', '10/03/2023', 'Disfru
 INSERT INTO `anuncios` VALUES (2, 'Conoce nuestras Instalaciones', '10/03/2023', 'No tienes que Pagar nada, ven a conocer nuestras Instalaciones', 'https://images.unsplash.com/photo-1603665409265-bdc00027c217?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60');
 
 
+CREATE TABLE `ejercicios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(45) NOT NULL,
+  `categoria` varchar(45) NOT NULL,
+  `tiempo` varchar(10) NOT NULL,
+  `instrucciones` varchar(1000) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO `ejercicios` VALUES (1, 'Correr', 'Cardio', '45', 'Realiza 3 intervalos de 10 minutos corriendo y 5 minutos de descanso entre cada intervalo nivelando tu capacidad para conseguirlo');
+INSERT INTO `ejercicios` VALUES (2, 'Burpees', 'Resistencia', '10', 'Realiza 50 repeticiones con intervalos de 5 Burpees por Minuto');
+INSERT INTO `ejercicios` VALUES (3, 'Push-Ups', 'Fuerza', '10', 'Realiza 30 repeticiones con intervalos de 3 Push-Ups por Minuto');
+
+
 CREATE TABLE `contacto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,

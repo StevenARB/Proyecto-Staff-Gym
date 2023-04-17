@@ -14,7 +14,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a class="active" href="usuario">
+                        <a href="usuario">
                             <i class="bi bi-person-fill nav-icon"></i>
                             <p th:text="#{navadmin.usuario}" class="nav-text"></p>
                         </a>
@@ -34,13 +34,18 @@
                             <p th:text="#{navadmin.contacto}" class="nav-text"></p>
                         </a>
                     </li>
-                    <li>
-                        <a class="active" href="contactar">
-                            <i class="bi bi-person-badge-fill nav-icon" ></i>
-                            <p th:text="#{navadmin.contactar}" class="nav-text"></p>
+                    <li><a href="ejercicio">
+                            <i class="bi bi-activity nav-icon"></i>
+                            <p th:text="#{navadmin.ejercicio}" class="nav-text"></p>
                         </a>
                     </li>
-                     <li><a href="reserva">
+                    <li>
+                        <a href="contactar">
+                            <i class="bi bi-person-badge-fill nav-icon" ></i>
+                            <p th:text="#{navadmin.entrenador}" class="nav-text"></p>
+                        </a>
+                    </li>
+                    <li><a class="active" href="reserva">
                             <i class="bi bi-calendar-check nav-icon"></i>
                             <p th:text="#{navadmin.reserva}" class="nav-text"></p>
                         </a>
@@ -50,8 +55,8 @@
                             <p th:text="#{navadmin.salir}" class="nav-text"></p>
                         </a>
                     </li>
-                    
-                    <li style="margin-top: 235%">
+
+                    <li style="margin-top: 170%">
                         <a th:text="#{navadmin.es}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                            th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}" style="color: white"></a>
                         <a th:text="#{navadmin.en}" th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
@@ -87,10 +92,10 @@
                 <th:block th:each="reservar : ${reservacion}">
                     <tr>
                         <td th:text="${reservar.getNombre}"></td>
-                         <td th:text="${reservar.getApellidos}"></td>
-                          <td th:text="${reservar.getCedula}"></td>
-                           <td th:text="${reservar.getEmail}"></td>
-                            <td th:text="${reservar.getTelefono}"></td>
+                        <td th:text="${reservar.getApellidos}"></td>
+                        <td th:text="${reservar.getCedula}"></td>
+                        <td th:text="${reservar.getEmail}"></td>
+                        <td th:text="${reservar.getTelefono}"></td>
                         <td th:text="${reservar.getFecha}"></td>
                         <td style="text-align: center">
                             <a type="button" class="btn btn-outline-secondary btn-sm" th:href="@{/actualizareserva/{id}(id=${reservar.getId})}">Actualizar</a>
