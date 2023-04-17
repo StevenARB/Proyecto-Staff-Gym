@@ -21,11 +21,6 @@ public class WebController {
         return "productos";
     }
 
-    @GetMapping("/foro")
-    public String foro() {
-        return "foro";
-    }
-
     @GetMapping("/membresia")
     public String membresia() {
         return "membresia";

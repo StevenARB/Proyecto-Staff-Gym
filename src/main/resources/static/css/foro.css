@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Righteous&display=swap');
+
 body {
-    background: rgba(12,12,12,0.5);
+    background-color: #333333;
     margin: 0;
 }
 
@@ -18,43 +19,17 @@ li a:hover:not(.active) {
     color: crimson !important;
 }
 
-.brand-font {
-    font-family: 'Righteous', cursive;
-    font-weight: 400;
+strong {
+    display: block;
 }
 
-.pregunta{
-    font-family: 'Open Sans', sans-serif;
-    padding-left: 23px;
-    min-height: 200px;   
+.contenedor {
+    margin-left: 12vw;
+    padding: 1px 16px;
+    height: 1000px;
 }
 
-.heading_foro{
-    margin-bottom: 10px; 
-    color:#ffc107;
-    padding-left:130px;
-}
-
-.crear{
-    position:relative;
-    left: 140px;
-}
-
-.response{
-    font-family: 'Open Sans', sans-serif;
-    color:#ffc107;
-    margin-top: 5%;
-    padding-left: 35px;
-
-}
-
-.heading_respuesta{
-    margin-bottom: 10px; 
-    color:#ffc107;
-    padding-left:130px;
-}
-
-.responder{
-    position: relative;
-    left:110px;
+.message-size {
+    width: 500px;
+    box-sizing: border-box;
 }

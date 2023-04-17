@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Foro - Staff Gym</title>
+        <title>Admin Foro - Staff Gym</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
@@ -15,9 +15,10 @@
                 <nav th:replace="plantilla/template::navbar"></nav>
             </header>
         </div>
-        <div style="margin-left:3vw;margin-top:6vw;padding:1px 20px;height:800px;">
+        <div style="margin-left:12vw;padding:1px 16px;height:1000px;">
+            <h1 th:text="#{foro.titulo}"></h1>
             <form th:action="@{/foroTitulo}" style="display: inline-block">
-                <div class="input-group mb-3" style="width:25vw">
+                <div class="input-group mb-3" style="width:20vw">
                     <input type="text" name="titulo" class="form-control" th:placeholder=#{foro.buscarTitulo} aria-label="Buscar Titulo" aria-describedby="button-addon2" th:value="${titulo}" required>
                     <input class="btn btn-outline-secondary" type="submit" id="button-addon2" th:value="#{foro.boton_buscar}"/>
                     &nbsp;&nbsp;
@@ -26,19 +27,39 @@
             <a href="/foro"><i class="bi bi-arrow-clockwise" style="color: #cc0033; margin-right:1vw"></i></a>
             <a th:text="#{foro.boton_nuevo}" type="button" class="btn btn-primary float-end" th:href="@{/crearForo}"></a>
             <table class="table table-striped">
-                <thead class="thead-dark">
+                <thead class="thead-light">
                     <tr>
                         <th th:text="#{foro.titulo}" scope="col"></th>
-                        <th th:text="#{foro.autor}" scope="col"></th>
+                        <th th:text="#{foro.Autor}" scope="col"></th>
                         <th th:text="#{foro.mensaje}" scope="col"></th>
+                        <th th:text="#{foro.accion}" scope="col" style="text-align: center"></th>
                     </tr>
                 </thead>
                 <tbody>
-                <th:block th:each="foro : ${foro}">
+                <th:block th:each="foro : {foro}">
                     <tr>
                         <td th:text="${foro.getTitulo}"></td>
                         <td th:text="${foro.getAutor}"></td>
                         <td class="message-size" th:text="${foro.getMensaje}"></td>
+                        <td style="text-align: center">
+                            <a th:text="#{foro.boton_eliminar}" type="button" class="btn btn-outline-danger btn-sm" id="deleteAd" data-bs-toggle="modal" th:attr="data-bs-target='#deleteCheckModal'+${foro.getId}" style="margin-left: 1vw"></a>
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 th:text="#{foro.eliminarForo}" class="modal-title" id="deleteCheckLabel"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p th:text="#{foro.seguroEliminar}"></p>
+                                        <strong th:text="${foro.getTitulo}"></strong>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button th:text="#{foro.boton_cancelar}" type="button" class="btn btn-secondary" data-bs-dismiss="modal"></button>
+                                        <a th:text="#{foro.boton_eliminar}" type="button" class="btn btn-danger" th:href="@{/eliminarForo/{id}(id=${foro.getId})}"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
                     </tr>
                 </th:block>
                 </tbody>
