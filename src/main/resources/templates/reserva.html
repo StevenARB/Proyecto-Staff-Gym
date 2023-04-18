@@ -66,7 +66,7 @@
             </nav>
         </header>
         <div style="margin-left:12vw;padding:1px 16px;height:1000px;">
-            <h1 th:text="${titulo1}"></h1>
+            <h1 th:text="#{reservacion.titulo}"></h1>
             <form th:action="@{/reservaBuscar}" style="display: inline-block">
                 <div class="input-group mb-3" style="width: 20vw">
                     <input type="text" name="cedula" class="form-control" th:placeholder=#{reserva.buscarCedula} aria-label="Ingresar Cédula" aria-describedby="button-addon2" th:value="${cedula}" required>
@@ -75,7 +75,7 @@
                 </div>
             </form>
             <a href="/reserva"><i class="bi bi-arrow-clockwise" style="color: #cc0033; margin-right: 1vw"></i></a>
-            <a type="#{reserva.boton_nuevo}"  class="btn btn-primary float-end" th:href="@{/crearReserva}">Nuevo</a>
+            <a th:text="#{reserva.crear}"  class="btn btn-primary float-end" th:href="@{/crearReserva}">Nuevo</a>
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>

@@ -65,7 +65,7 @@
                 </ul>
             </nav>
             <div class="contenedor">
-                <h2 th:text="${tituloCU}"></h2>
+                <h2 th:text="#{reservacion.titulo}"></h2>
                 <hr class="horizontal-line">
                 <form th:action="@{/guardarReserva}" th:object=${reserva} method="POST">
                     <input type="hidden" th:field="*{id}">
